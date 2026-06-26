@@ -1,0 +1,62 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="adBg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#F7FBFE"/><stop offset="1" stop-color="#EAF4FD"/>
+    </linearGradient>
+    <radialGradient id="adAtm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#58AAEC" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#58AAEC" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="adAccent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#146DB4"/><stop offset="1" stop-color="#14319C"/>
+    </linearGradient>
+    <radialGradient id="adCard" cx="0.5" cy="0.35" r="0.8">
+      <stop offset="0" stop-color="#1C7FD0"/><stop offset="1" stop-color="#14319C"/>
+    </radialGradient>
+    <filter id="adShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+      <feOffset dx="0" dy="8" result="o"/>
+      <feFlood flood-color="#146DB4" flood-opacity="0.18"/>
+      <feComposite in2="o" operator="in" result="s"/>
+      <feMerge><feMergeNode in="s"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="1280" height="720" fill="url(#adBg)"/>
+  <g id="bg-decoration">
+    <circle cx="1120" cy="120" r="300" fill="url(#adAtm)"/>
+    <circle cx="170" cy="650" r="260" fill="url(#adAtm)"/>
+  </g>
+  <g id="header">
+    <text data-slot="page_title" x="84" y="78" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="40" font-weight="bold" fill="#222A35">页面标题</text>
+    <rect x="84" y="92" width="120" height="6" rx="3" fill="url(#adAccent)"/>
+  </g>
+  <!-- 4 张图标卡 -->
+  <g id="card-1">
+    <rect x="70" y="206" width="246" height="304" rx="18" fill="url(#adCard)" filter="url(#adShadow)"/>
+    <circle cx="193" cy="290" r="36" fill="#FFFFFF"/>
+    <use data-icon="tabler-outline/presentation-analytics" x="167" y="264" width="52" height="52" fill="#146DB4"/>
+    <text data-slot="card1_label" x="193" y="372" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="26" font-weight="bold" fill="#FFFFFF">要点一</text>
+    <text data-slot="card1_desc" x="193" y="420" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="17" fill="#DCEBFB"><tspan x="193" dy="0">简要说明文字,</tspan><tspan x="193" dy="26">两行内收住。</tspan></text>
+  </g>
+  <g id="card-2">
+    <rect x="368" y="206" width="246" height="304" rx="18" fill="url(#adCard)" filter="url(#adShadow)"/>
+    <circle cx="491" cy="290" r="36" fill="#FFFFFF"/>
+    <use data-icon="tabler-outline/flask-2" x="465" y="264" width="52" height="52" fill="#146DB4"/>
+    <text data-slot="card2_label" x="491" y="372" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="26" font-weight="bold" fill="#FFFFFF">要点二</text>
+    <text data-slot="card2_desc" x="491" y="420" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="17" fill="#DCEBFB"><tspan x="491" dy="0">简要说明文字,</tspan><tspan x="491" dy="26">两行内收住。</tspan></text>
+  </g>
+  <g id="card-3">
+    <rect x="666" y="206" width="246" height="304" rx="18" fill="url(#adCard)" filter="url(#adShadow)"/>
+    <circle cx="789" cy="290" r="36" fill="#FFFFFF"/>
+    <use data-icon="tabler-outline/microscope" x="763" y="264" width="52" height="52" fill="#146DB4"/>
+    <text data-slot="card3_label" x="789" y="372" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="26" font-weight="bold" fill="#FFFFFF">要点三</text>
+    <text data-slot="card3_desc" x="789" y="420" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="17" fill="#DCEBFB"><tspan x="789" dy="0">简要说明文字,</tspan><tspan x="789" dy="26">两行内收住。</tspan></text>
+  </g>
+  <g id="card-4">
+    <rect x="964" y="206" width="246" height="304" rx="18" fill="url(#adCard)" filter="url(#adShadow)"/>
+    <circle cx="1087" cy="290" r="36" fill="#FFFFFF"/>
+    <use data-icon="tabler-outline/award" x="1061" y="264" width="52" height="52" fill="#146DB4"/>
+    <text data-slot="card4_label" x="1087" y="372" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="26" font-weight="bold" fill="#FFFFFF">要点四</text>
+    <text data-slot="card4_desc" x="1087" y="420" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="17" fill="#DCEBFB"><tspan x="1087" dy="0">简要说明文字,</tspan><tspan x="1087" dy="26">两行内收住。</tspan></text>
+  </g>
+</svg>

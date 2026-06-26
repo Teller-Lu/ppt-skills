@@ -1,0 +1,391 @@
+{
+  "version": "1.0",
+  "note": "组件库索引。schema 见 docs/素材模型与组件库规格.md §六;蒸馏/回流/烘焙见 docs/保真与内容适配方法论.md;华丽技法(母题/真图标/幽灵描边)见 docs/技法库.md。所有组件均为引擎安全的蒸馏件(非 pptx_to_svg 原始转换),从 PowerPoint 真渲染提炼,全部通过 aesthetic_checker 非朴素门并导出原生 pptx 验证。真图标用 <use data-icon=\"tabler-outline/名\">,finalize 时自动内联。business-blue 为第二风格族(段型 bz-seg2/3/4/multi + 表格 bz-table + 数据看板 bz-data + 整段说明 bz-text + 封面 bz-cover + 目录 bz-toc + 章节 bz-section + 团队 bz-team + 图文 bz-showcase + 结尾 bz-closing,源 work_inspire_128;**首轮全页型覆盖完成 = 13 件,封面→结尾可成整套**;该册 signature = 中心母题 + 多点放射;策略=广度优先每内容类型先取 1 代表变体;本册无纯文字墙页,bz-text 为 floor 语言组合;封面渐变标题→实色或烘焙,天际线等出血背景母题用含 -decor 的组 id 豁免门)。",
+  "components": [
+    {
+      "id": "ad-cover-01", "content_type": "cover", "style_family": ["academic", "blue"],
+      "parent_style": "academic-defense", "source": "academic_defense_25#slide_01", "canvas": "16:9",
+      "file": "ad-cover-01.svg", "assets": "ad-cover-01.assets/bg.jpg",
+      "slots": [
+        {"name": "bg_image", "type": "image", "note": "默认建筑照片,可替换为用户图"},
+        {"name": "title", "type": "text"}, {"name": "title_main", "type": "text"},
+        {"name": "subtitle_en", "type": "text"},
+        {"name": "presenter", "type": "text"}, {"name": "advisor", "type": "text"}, {"name": "major", "type": "text"}
+      ],
+      "color_roles": {"#146DB4": "primary", "#0F5287": "primary-deep", "#58AAEC": "primary-light", "#FFFFFF": "on-color", "#44546A": "ink-muted"},
+      "content_contract": {"title_main": {"max_lines": 1, "font_px": [60, 74], "content_box": [190, 360, 900, 90], "overflow": "shrink"}},
+      "technique_map": {"photo-cover": "整幅 <image> slice", "title-legibility": "叠加 radialGradient 白光 rect(非 image-opacity)", "ribbon": "双层 <path> 渐变缎带", "footer-icons": "tabler-outline user/school/book"}
+    },
+    {
+      "id": "ad-toc-01", "content_type": "toc", "style_family": ["academic", "blue"],
+      "parent_style": "academic-defense", "source": "academic_defense_25#slide_02", "canvas": "16:9",
+      "file": "ad-toc-01.svg",
+      "slots": [
+        {"name": "toc_label", "type": "text", "default": "目录"},
+        {"name": "num_<N>", "type": "enum", "note": "01..05"},
+        {"name": "item_<N>", "type": "text", "note": "item_1..item_5"}
+      ],
+      "color_roles": {"#1C7FD0": "panel", "#0F2E6B": "panel-deep", "#146DB4": "primary", "#222A35": "ink-strong", "#EAF4FD": "watermark", "#DCEBFB": "divider"},
+      "content_contract": {"item_N": {"max_lines": 1, "font_px": [22, 24], "content_box": [742, 0, 440, 36]}},
+      "capacity": {"items": [3, 5]},
+      "technique_map": {"left-panel": "渐变面板 + 弧形右缘 <path>(替代照片,可复用)", "watermark": "大号 CONTENTS 浅色"}
+    },
+    {
+      "id": "ad-section-01", "content_type": "section", "style_family": ["academic", "blue"],
+      "parent_style": "academic-defense", "source": "academic_defense_25#slide_03", "canvas": "16:9",
+      "file": "ad-section-01.svg",
+      "slots": [
+        {"name": "section_number", "type": "enum", "values": ["01", "02", "03", "04", "05", "06"], "note": "同时替换幽灵文字与烘焙图"},
+        {"name": "section_number_image", "type": "baked-image", "asset": "ad-section-01.assets/num_<NN>.png"},
+        {"name": "section_title", "type": "text"}, {"name": "part_label", "type": "text"}
+      ],
+      "color_roles": {"#146DB4": "primary", "#E7E6E6": "ghost", "#222A35": "ink-strong", "#58AAEC": "primary-light"},
+      "content_contract": {"section_title": {"max_lines": 2, "font_px": [44, 60], "content_box": [742, 300, 480, 150], "overflow": "shrink->wrap"}},
+      "technique_map": {"picture-filled-number": "烘焙成 PNG 用 <image>(文字图片填充无 PPT 原生路径)", "atmosphere": "径向氛围圆", "accent": "渐变竖条/下划线"}
+    },
+    {
+      "id": "ad-seg3-01", "content_type": "seg-3", "style_family": ["academic", "blue"],
+      "parent_style": "academic-defense", "source": "academic_defense_25#slide_05", "canvas": "16:9",
+      "file": "ad-seg3-01.svg",
+      "slots": [
+        {"name": "page_title", "type": "text"},
+        {"name": "card<N>_label", "type": "text"}, {"name": "card<N>_desc", "type": "text"}
+      ],
+      "color_roles": {"#146DB4": "primary", "#1C7FD0": "card-grad-from", "#14319C": "card-grad-to", "#FFFFFF": "on-color", "#DCEBFB": "on-color-tint", "#222A35": "ink-strong"},
+      "content_contract": {
+        "page_title": {"max_lines": 1, "font_px": [40, 40], "content_box": [84, 50, 900, 56]},
+        "cardN_label": {"max_lines": 1, "font_px": [24, 28], "content_box": [0, 0, 280, 40], "rel_to": "card"},
+        "cardN_desc": {"max_lines": 2, "font_px": [16, 18], "content_box": [0, 0, 280, 60], "rel_to": "card", "overflow": "wrap->shrink"}
+      },
+      "capacity": {"cards": 3},
+      "technique_map": {"icon-badge": "白圆 + tabler-outline target/bulb/checklist", "card": "径向渐变卡 + 蓝投影(0.18)"}
+    },
+    {
+      "id": "ad-seg4-01", "content_type": "seg-4", "style_family": ["academic", "blue"],
+      "parent_style": "academic-defense", "source": "academic_defense_25#slide_13", "canvas": "16:9",
+      "file": "ad-seg4-01.svg",
+      "slots": [
+        {"name": "page_title", "type": "text"},
+        {"name": "card<N>_label", "type": "text"}, {"name": "card<N>_desc", "type": "text"}
+      ],
+      "color_roles": {"#146DB4": "primary", "#1C7FD0": "card-grad-from", "#14319C": "card-grad-to", "#FFFFFF": "on-color", "#DCEBFB": "on-color-tint", "#222A35": "ink-strong"},
+      "content_contract": {
+        "cardN_label": {"max_lines": 1, "font_px": [22, 26], "content_box": [0, 0, 246, 40], "rel_to": "card"},
+        "cardN_desc": {"max_lines": 2, "font_px": [16, 17], "content_box": [0, 0, 246, 60], "rel_to": "card", "overflow": "wrap->shrink"}
+      },
+      "capacity": {"cards": 4},
+      "technique_map": {"icon-badge": "白圆 + tabler-outline presentation-analytics/flask-2/microscope/award"}
+    },
+    {
+      "id": "ad-comparison-01", "content_type": "comparison", "style_family": ["academic", "blue"],
+      "parent_style": "academic-defense", "source": "academic_defense_25#slide_18", "canvas": "16:9",
+      "file": "ad-comparison-01.svg",
+      "slots": [
+        {"name": "page_title", "type": "text"},
+        {"name": "left_head_1", "type": "text", "note": "双色标题上句(primary)"}, {"name": "left_head_2", "type": "text", "note": "双色标题下句(ink)"},
+        {"name": "left_para_<N>", "type": "text", "note": "left_para_1..3"},
+        {"name": "right_head_1", "type": "text"}, {"name": "right_head_2", "type": "text"},
+        {"name": "right_para_<N>", "type": "text", "note": "right_para_1..2"}
+      ],
+      "color_roles": {"#146DB4": "primary", "#1B5E92": "disc-deep", "#0F2E6B": "disc-deep-to", "#58AAEC": "disc-bright", "#222A35": "ink-strong", "#44546A": "ink-muted"},
+      "content_contract": {
+        "left_para_N|right_para_N": {"max_lines": 2, "font_px": [16, 17], "content_box": [0, 0, 320, 52], "overflow": "wrap->shrink"}
+      },
+      "capacity": {"left_paras": [2, 3], "right_paras": [2, 3]},
+      "technique_map": {"two-circle-vs": "深盘─三角marker箭头─亮盘 + 盘内白线图标(file-search/bulb)", "two-tone-heading": "相邻 text 两色", "ghost-rings": "同心描边 stroke-opacity"}
+    },
+    {
+      "id": "ad-hub-01", "content_type": "logic-diagram", "style_family": ["academic", "blue"],
+      "parent_style": "academic-defense", "source": "academic_defense_25#slide_19", "canvas": "16:9",
+      "file": "ad-hub-01.svg",
+      "slots": [
+        {"name": "page_title", "type": "text"},
+        {"name": "hub_title", "type": "text", "note": "中心 2 行"},
+        {"name": "block<N>_head", "type": "text"}, {"name": "block<N>_body", "type": "text", "note": "block_1..4"}
+      ],
+      "color_roles": {"#1C7FD0": "hub-from", "#14319C": "hub-to", "#58AAEC": "hex-from", "#146DB4": "primary", "#222A35": "ink-strong", "#44546A": "ink-muted"},
+      "content_contract": {
+        "blockN_head": {"max_lines": 1, "font_px": [22, 24]},
+        "blockN_body": {"max_lines": 2, "font_px": [16, 17], "content_box": [0, 0, 320, 52], "overflow": "wrap->shrink"}
+      },
+      "capacity": {"satellites": [3, 4]},
+      "technique_map": {"hub-satellite": "中心渐变块 + N 个六边形图标徽章(polygon→custGeom)", "icons": "tabler-outline bolt/activity/route-2/network", "ghost-hexagon": "大六边形描边底"}
+    },
+    {
+      "id": "ad-timeline-01", "content_type": "process-timeline", "style_family": ["academic", "blue"],
+      "parent_style": "academic-defense", "source": "academic_defense_25#slide_09", "canvas": "16:9",
+      "file": "ad-timeline-01.svg",
+      "slots": [
+        {"name": "page_title", "type": "text"},
+        {"name": "node<N>_period", "type": "text"}, {"name": "node<N>_desc", "type": "text", "note": "node_1..5"}
+      ],
+      "color_roles": {"#146DB4": "primary", "#14319C": "node-grad-to", "#C7E3F9": "axis", "#222A35": "ink-strong", "#44546A": "ink-muted"},
+      "content_contract": {
+        "nodeN_period": {"max_lines": 1, "font_px": [20, 22]},
+        "nodeN_desc": {"max_lines": 2, "font_px": [14, 15], "content_box": [0, 0, 200, 48], "rel_to": "node-centered"}
+      },
+      "capacity": {"nodes": [4, 6]},
+      "technique_map": {"wave": "底部流动波带 <path> 渐变", "zigzag-nodes": "渐变节点圆上下交替 + 虚线连接"}
+    },
+    {
+      "id": "ad-table-01", "content_type": "table", "style_family": ["academic", "blue"],
+      "parent_style": "academic-defense", "source": "academic_defense_25#slide_14", "canvas": "16:9",
+      "file": "ad-table-01.svg",
+      "slots": [
+        {"name": "page_title", "type": "text"},
+        {"name": "h<N>", "type": "text", "note": "表头 h1..h5"},
+        {"name": "group_<N>", "type": "text", "note": "分组标签 group_1/2"},
+        {"name": "r<N>c<M>", "type": "grid", "note": "数据单元格 r1c2..r4c5;c5 为星级 ★★★★☆"}
+      ],
+      "color_roles": {"#146DB4": "header", "#0F5287": "header-to", "#1C7FD0": "group-from", "#FFFFFF": "row-odd", "#EAF4FD": "row-even", "#222A35": "ink-strong", "#44546A": "ink-muted"},
+      "content_contract": {"cell": {"max_lines": 1, "font_px": [16, 18], "content_box": [0, 0, 340, 40], "rel_to": "cell", "overflow": "shrink"}},
+      "capacity": {"cols": 4, "rows": [3, 6], "groups": [1, 3]},
+      "technique_map": {"gradient-header": "渐变表头行", "group-cells": "左侧分组标签渐变格", "zebra": "交替行底色", "star-rating": "★/☆ raw unicode"}
+    },
+    {
+      "id": "ad-references-01", "content_type": "references", "style_family": ["academic", "blue"],
+      "parent_style": "academic-defense", "source": "academic_defense_25#slide_23", "canvas": "16:9",
+      "file": "ad-references-01.svg",
+      "slots": [
+        {"name": "page_title", "type": "text", "default": "参考文献"},
+        {"name": "ref_<N>", "type": "text", "note": "ref_1..8;两栏,[n] 蓝色编号 + 引文"}
+      ],
+      "color_roles": {"#146DB4": "primary", "#222A35": "ink-strong", "#44546A": "ink-muted"},
+      "content_contract": {"ref_N": {"max_lines": 3, "font_px": [14, 15], "content_box": [0, 0, 520, 70], "overflow": "wrap->shrink"}},
+      "capacity": {"refs": [4, 8]},
+      "technique_map": {"two-column": "左右两栏编号引文", "ghost-ring": "背景幽灵描边"}
+    },
+    {
+      "id": "ad-closing-01", "content_type": "closing", "style_family": ["academic", "blue"],
+      "parent_style": "academic-defense", "source": "academic_defense_25#slide_24", "canvas": "16:9",
+      "file": "ad-closing-01.svg",
+      "slots": [
+        {"name": "thanks_watermark", "type": "text", "default": "THANKS"},
+        {"name": "closing_cn", "type": "text", "default": "敬请指正"},
+        {"name": "closing_sub", "type": "text", "default": "Thanks For Watching !"}
+      ],
+      "color_roles": {"#146DB4": "primary", "#EAF4FD": "watermark", "#44546A": "ink-muted", "#D6E9FB": "sky-from"},
+      "content_contract": {"closing_cn": {"max_lines": 1, "font_px": [72, 92], "content_box": [240, 330, 800, 90]}},
+      "technique_map": {"sky": "竖向天空渐变", "moon": "径向柔光圆", "watermark": "大号 THANKS 浅色;原模板书法体+渐变→如需可烘焙"}
+    },
+    {
+      "id": "bz-seg2-01", "content_type": "comparison", "style_family": ["business", "blue", "azure"],
+      "parent_style": "business-blue", "source": "work_inspire_128#slide_025", "canvas": "16:9",
+      "file": "bz-seg2-01.svg",
+      "slots": [
+        {"name": "page_title", "type": "text"},
+        {"name": "left_label_<N>", "type": "text", "note": "左圆标题 1..2"},
+        {"name": "right_label_<N>", "type": "text", "note": "右圆标题 1..2"},
+        {"name": "left_p<N>", "type": "text", "note": "左侧要点 left_p1..4(右对齐)"},
+        {"name": "right_p<N>", "type": "text", "note": "右侧要点 right_p1..4(左对齐)"}
+      ],
+      "color_roles": {"#045FD4": "primary", "#0A66DD": "disc-to/icon", "#3CB6FF": "disc-from", "#079FFE": "dot", "#1F2733": "ink-strong", "#5C636E": "ink-muted", "#E9F3FF": "disc-left", "#ACD2F2": "disc-left-stroke"},
+      "content_contract": {
+        "left_p<N>|right_p<N>": {"max_lines": 1, "font_px": [15, 16], "content_box": [0, 0, 240, 28], "overflow": "shrink"}
+      },
+      "capacity": {"left_points": [3, 4], "right_points": [3, 4]},
+      "technique_map": {"two-circle-venn": "浅左圆 + azure渐变右圆交叠;白线图标 file-search/cpu", "ghost-rings": "同心描边 stroke-opacity", "bullets": "azure 点 + 左右对齐要点"}
+    },
+    {
+      "id": "bz-seg3-01", "content_type": "seg-3", "style_family": ["business", "blue", "azure"],
+      "parent_style": "business-blue", "source": "work_inspire_128#slide_034", "canvas": "16:9",
+      "file": "bz-seg3-01.svg",
+      "slots": [
+        {"name": "page_title", "type": "text"},
+        {"name": "card<N>_title", "type": "text", "note": "card1..3"},
+        {"name": "card<N>_body", "type": "text"},
+        {"name": "footer_note", "type": "text", "note": "底部 ribbon 总结句"}
+      ],
+      "color_roles": {"#FFFFFF": "card", "#3CC0FF": "icon-from", "#0A66DD": "icon-to", "#045FD4": "title", "#5C636E": "ink-muted", "#079FFE": "ribbon-from", "#54CCFF": "ribbon-to"},
+      "content_contract": {
+        "cardN_title": {"max_lines": 1, "font_px": [20, 22], "content_box": [0, 0, 320, 32], "rel_to": "card"},
+        "cardN_body": {"max_lines": 5, "font_px": [14, 15], "content_box": [0, 0, 320, 130], "rel_to": "card", "overflow": "wrap->shrink"}
+      },
+      "capacity": {"cards": 3},
+      "technique_map": {"icon-disc": "azure→cyan 径向圆盘 + 白图标 coin-yuan/clipboard-check/shield-check", "card": "白卡 + 蓝投影(0.14)", "footer-ribbon": "azure→cyan 圆角条 + 白字总结"}
+    },
+    {
+      "id": "bz-seg4-01", "content_type": "seg-4", "style_family": ["business", "blue", "azure"],
+      "parent_style": "business-blue", "source": "work_inspire_128#slide_045", "canvas": "16:9",
+      "file": "bz-seg4-01.svg",
+      "slots": [
+        {"name": "page_title", "type": "text"},
+        {"name": "sat<N>_label", "type": "text", "note": "卫星标签 sat1..4(2行);编号 01-04 固定"}
+      ],
+      "color_roles": {"#36B6FF": "hub-from", "#0A5FD4": "hub-to", "#FFFFFF": "sat-fill/icon", "#BBD9F5": "sat-stroke", "#0A66DD": "sat-icon", "#079FFE": "number", "#1F2733": "ink-strong"},
+      "content_contract": {
+        "satN_label": {"max_lines": 2, "font_px": [14, 16], "content_box": [0, 0, 180, 50], "rel_to": "hexagon-centered"}
+      },
+      "capacity": {"satellites": 4},
+      "technique_map": {"honeycomb-hub": "中心 azure 渐变六边形(link)+ 4 卫星白六边形 zigzag(polygon→custGeom)", "icons": "database/network/refresh/chart-bar", "numbers": "01-04 azure 交替上下", "ghost-hexagon": "大六边形描边底"}
+    },
+    {
+      "id": "bz-segmulti-01", "content_type": "seg-multi", "style_family": ["business", "blue", "azure"],
+      "parent_style": "business-blue", "source": "work_inspire_128#slide_053", "canvas": "16:9",
+      "file": "bz-segmulti-01.svg",
+      "slots": [
+        {"name": "center_title_<N>", "type": "text", "note": "中心六边形 2 行 1..2"},
+        {"name": "p<N>_title", "type": "text", "note": "支柱标题 p1..5"},
+        {"name": "p<N>_desc", "type": "text", "note": "支柱说明 p1..5"}
+      ],
+      "color_roles": {"#36B6FF": "hub-from", "#0A5FD4": "hub-to", "#3CC0FF": "icon-from", "#0A66DD": "icon-to", "#045FD4": "title", "#5C636E": "ink-muted", "#FFFFFF": "on-color"},
+      "content_contract": {
+        "pN_title": {"max_lines": 1, "font_px": [18, 20], "content_box": [0, 0, 200, 28]},
+        "pN_desc": {"max_lines": 3, "font_px": [13, 14], "content_box": [0, 0, 200, 70], "overflow": "wrap->shrink"}
+      },
+      "capacity": {"pillars": 5},
+      "technique_map": {"pillar-hub": "中心 azure 渐变六边形 + 5 放射图标圆(左2右对齐/右2左对齐/下1居中)", "icons": "users-group/bulb/report-analytics/user-heart/world", "title-2line": "短焦点文字用双 <text> 强制断行(勿 tspan,引擎按框宽会重折)", "ghost-hexagon": "大六边形描边底"}
+    },
+    {
+      "id": "bz-table-01", "content_type": "table", "style_family": ["business", "blue", "azure"],
+      "parent_style": "business-blue", "source": "work_inspire_128#slide_074", "canvas": "16:9",
+      "file": "bz-table-01.svg",
+      "slots": [
+        {"name": "page_title", "type": "text"},
+        {"name": "h<N>", "type": "text", "note": "表头 h1..h6"},
+        {"name": "r<N>c<M>", "type": "grid", "note": "数据单元格 r1c1..r6c6;某关键列加粗(fill ink-strong)"}
+      ],
+      "color_roles": {"#0CA2FF": "header-from", "#0A5FD4": "header-to", "#FFFFFF": "card/on-color", "#EAF2FD": "row-even", "#1F2733": "ink-strong", "#44546A": "ink-muted"},
+      "content_contract": {"cell": {"max_lines": 1, "font_px": [16, 17], "content_box": [0, 0, 200, 40], "rel_to": "cell", "overflow": "shrink"}},
+      "capacity": {"cols": [4, 6], "rows": [3, 6]},
+      "technique_map": {"rounded-card": "圆角白卡 + 蓝投影(0.14)", "gradient-header": "渐变表头,顶角圆角用 <path> A 弧", "zebra": "偶数行浅蓝底(inset)", "key-column": "关键列加粗 ink-strong"}
+    },
+    {
+      "id": "bz-data-01", "content_type": "data", "style_family": ["business", "blue", "azure"],
+      "parent_style": "business-blue", "source": "work_inspire_128#slide_117", "canvas": "16:9",
+      "file": "bz-data-01.svg",
+      "slots": [
+        {"name": "page_title", "type": "text"},
+        {"name": "c<N>_year", "type": "text", "note": "卡片年份/期次 c1..3"},
+        {"name": "c<N>_metric", "type": "text", "note": "指标名"},
+        {"name": "c<N>_kpi1", "type": "text", "note": "主 KPI 蓝数字"}, {"name": "c<N>_kpi2", "type": "text", "note": "副 KPI 蓝数字"},
+        {"name": "c<N>_caption", "type": "text", "note": "图表说明"},
+        {"name": "c<N>_b<M>", "type": "text", "note": "柱值标签 b1..3(末柱加粗高亮)"},
+        {"name": "c<N>_x<M>", "type": "text", "note": "X 轴标签 x1..3"}
+      ],
+      "color_roles": {"#FFFFFF": "card", "#045FD4": "kpi-number", "#DCE3EE": "bar-gray-from", "#C4CCD9": "bar-gray-to", "#3CC0FF": "bar-azure-from", "#0A66DD": "bar-azure-to", "#0A9FFE": "trend-line/arrow", "#98A0AC": "axis-label", "#5C636E": "ink-muted"},
+      "content_contract": {
+        "cN_kpi1|cN_kpi2": {"max_lines": 1, "font_px": [20, 24], "content_box": [0, 0, 160, 32], "overflow": "shrink"}
+      },
+      "capacity": {"cards": 3, "bars": 3},
+      "technique_map": {"kpi-card": "白卡 + 双 KPI 蓝数字", "mini-bar-chart": "灰柱×2 + azure 渐变高亮末柱", "trend-polyline": "穿柱顶折线 + marker-end azure 三角箭头", "title-badge": "trending-up 图标徽章 + accent 下划线"}
+    },
+    {
+      "id": "bz-text-01", "content_type": "text", "style_family": ["business", "blue", "azure"],
+      "parent_style": "business-blue", "source": "work_inspire_128#composed(本册无纯文字墙页,floor 语言组合)", "canvas": "16:9",
+      "file": "bz-text-01.svg",
+      "slots": [
+        {"name": "page_title", "type": "text"},
+        {"name": "eyebrow", "type": "text", "note": "眉标(EN · 中)"},
+        {"name": "lead", "type": "text", "note": "引导句(加粗 ink)"},
+        {"name": "p_line<N>", "type": "text", "note": "正文按视觉行拆 p_line1..4(独立 <text>,勿 tspan)"},
+        {"name": "rail_caption", "type": "text", "note": "左轨说明"},
+        {"name": "tag<N>", "type": "text", "note": "关键词标签 tag1..3"}
+      ],
+      "color_roles": {"#FFFFFF": "card", "#045FD4": "primary/tag", "#079FFE": "eyebrow/accent-from", "#54CCFF": "accent-to", "#3CC0FF": "disc-from", "#0A66DD": "disc-to", "#1F2733": "ink-strong", "#5C636E": "ink-muted", "#EAF2FD": "pill-bg", "#ACD2F2": "ghost-ring"},
+      "content_contract": {
+        "lead": {"max_lines": 1, "font_px": [22, 24], "content_box": [540, 280, 660, 36], "overflow": "shrink"},
+        "p_line<N>": {"max_lines": 1, "font_px": [16, 17], "content_box": [540, 0, 660, 30], "note": "每行独立 <text>,整段视觉行手控,勿 tspan"}
+      },
+      "capacity": {"para_lines": [3, 5], "tags": [2, 3]},
+      "technique_map": {"lead-paragraph": "眉标 + 加粗引导句 + 整段正文(逐视觉行独立 <text>)", "icon-rail": "azure→cyan 图标圆盘 building-skyscraper + 幽灵环 + 说明", "keyword-pills": "azure-tint 圆角胶囊 + azure 点 + 关键词", "accent-bar": "眉标前 azure→cyan 短条 + 标题下划线"}
+    },
+    {
+      "id": "bz-cover-01", "content_type": "cover", "style_family": ["business", "blue", "azure"],
+      "parent_style": "business-blue", "source": "work_inspire_128#slide_008", "canvas": "16:9",
+      "file": "bz-cover-01.svg",
+      "slots": [
+        {"name": "eyebrow_tag", "type": "text", "note": "眉标胶囊(含图标)"},
+        {"name": "title_main", "type": "text", "note": "主标题关键词(实色,大)"},
+        {"name": "subtitle", "type": "text"}, {"name": "subtitle_en", "type": "text"},
+        {"name": "presenter", "type": "text"}, {"name": "org_date", "type": "text"}
+      ],
+      "color_roles": {"#045FD4": "title/primary", "#0A66DD": "eyebrow", "#079FFE": "accent-from", "#54CCFF": "accent-to", "#1F2733": "ink-strong", "#5C636E": "ink-muted", "#5CC8FF": "tower-from", "#6BA6E8": "skyline-decor", "#A8E2FF": "sphere-hi"},
+      "content_contract": {
+        "title_main": {"max_lines": 1, "font_px": [48, 66], "content_box": [84, 270, 460, 80], "overflow": "shrink"},
+        "subtitle": {"max_lines": 1, "font_px": [30, 40], "content_box": [84, 380, 460, 50], "overflow": "shrink"}
+      },
+      "technique_map": {"skyline-decor": "半透明矩形组复刻蓝色玻璃幕墙天际线;组 id 含 -decor → 门豁免 PALETTE/SAFE_MARGIN(背景母题=装饰,出血到边)", "tower-gradient": "主塔 azure→deep 竖向渐变 + 白色楼层窗线(stroke-opacity,勿用组 opacity)", "3d-sphere": "径向渐变球(高光→azure→deep)做招牌点缀", "eyebrow-pill": "半透明白胶囊 + azure 图标圆 + 标签", "solid-title": "渐变标题会被引擎压成纯色 → 用实色 primary(要渐变光泽须烘焙 PNG)"}
+    },
+    {
+      "id": "bz-toc-01", "content_type": "toc", "style_family": ["business", "blue", "azure"],
+      "parent_style": "business-blue", "source": "work_inspire_128#slide_017", "canvas": "16:9",
+      "file": "bz-toc-01.svg",
+      "slots": [
+        {"name": "item_<N>", "type": "text", "note": "条目标题 item_1..6"},
+        {"name": "eyebrow_<N>", "type": "text", "note": "PART 眉标 eyebrow_1..6;编号 01-06 固定"}
+      ],
+      "color_roles": {"#41BBFF": "hex-from", "#0A5FD4": "hex-to", "#1F2733": "ink-strong", "#98A0AC": "eyebrow", "#DCEBFD": "emblem-halo", "#A9BBD2": "watermark", "#BBD5F5": "ghost-hex", "#FFFFFF": "on-color/pill"},
+      "content_contract": {
+        "item_<N>": {"max_lines": 1, "font_px": [20, 22], "content_box": [0, 0, 200, 32], "overflow": "shrink"}
+      },
+      "capacity": {"items": [4, 6]},
+      "technique_map": {"hex-emblem": "中心 pointy-top 六边形(azure→deep)+ halo 幽灵六边形 + 目录;polygon→custGeom 引擎安全", "radial-items": "左3 右3 对称放射;每项=半透明白卡 pill + 编号六边形 + PART 眉标 + 标题(右列 text-anchor=end)", "bg-ghost-hex": "背景幽灵六边形描边,放 id 含 decoration 的组 → 豁免门", "watermark-title": "CONTENTS 大字号水印,id 含 watermark → 豁免 PALETTE"}
+    },
+    {
+      "id": "bz-section-01", "content_type": "section", "style_family": ["business", "blue", "azure"],
+      "parent_style": "business-blue", "source": "work_inspire_128#slide_018", "canvas": "16:9",
+      "file": "bz-section-01.svg",
+      "slots": [
+        {"name": "section_number", "type": "enum", "values": ["01", "02", "03", "04", "05", "06"]},
+        {"name": "part_label", "type": "text", "note": "PART ONE..SIX"},
+        {"name": "section_title", "type": "text"}, {"name": "section_title_en", "type": "text"}
+      ],
+      "color_roles": {"#045FD4": "number/primary", "#079FFE": "accent-from", "#54CCFF": "accent-to", "#1F2733": "ink-strong", "#98A0AC": "ink-muted/en", "#2E6FC8": "skyline-near", "#7FB0EA": "skyline-far", "#FFFFFF": "on-color"},
+      "content_contract": {
+        "section_title": {"max_lines": 1, "font_px": [40, 54], "content_box": [64, 240, 560, 64], "overflow": "shrink"}
+      },
+      "capacity": {"sections": [1, 6]},
+      "technique_map": {"big-number": "实色 azure 大编号(先画 → 被天际线遮挡形成景深;渐变编号会被引擎压纯色,要渐变须烘焙 PNG)", "part-pill": "azure→cyan 渐变圆角胶囊 + 白 PART 标签", "skyline-decor": "底部全宽天际线矩形组(双层景深:远浅 #7FB0EA / 近深 #2E6FC8),id 含 decor → 豁免 PALETTE/SAFE_MARGIN", "accent-bar": "标题下 azure→cyan 短条"}
+    },
+    {
+      "id": "bz-team-01", "content_type": "team", "style_family": ["business", "blue", "azure"],
+      "parent_style": "business-blue", "source": "work_inspire_128#slide_087", "canvas": "16:9",
+      "file": "bz-team-01.svg",
+      "slots": [
+        {"name": "page_title", "type": "text"},
+        {"name": "photo_<N>", "type": "image", "note": "头像占位(运行时填用户照片裁圆)photo_1..4"},
+        {"name": "name_<N>", "type": "text"}, {"name": "role_<N>", "type": "text"},
+        {"name": "desc_<N>a", "type": "text", "note": "描述按视觉行拆 desc_Na/desc_Nb(独立 <text>,勿 tspan)"}, {"name": "desc_<N>b", "type": "text"}
+      ],
+      "color_roles": {"#FFFFFF": "card", "#1F2733": "name", "#045FD4": "role", "#98A0AC": "desc", "#ACD2F2": "avatar-ring", "#2E86E0": "avatar-icon", "#E6F3FF": "avatar-from", "#C4E0F7": "avatar-to", "#D8E5F5": "watermark"},
+      "content_contract": {
+        "name_<N>": {"max_lines": 1, "font_px": [22, 24], "content_box": [0, 0, 220, 32], "rel_to": "card"},
+        "role_<N>": {"max_lines": 1, "font_px": [15, 16], "content_box": [0, 0, 220, 24], "rel_to": "card"}
+      },
+      "capacity": {"members": [3, 4]},
+      "technique_map": {"member-card-zigzag": "白卡上下错位 + 蓝投影(0.12)", "avatar-placeholder": "幽灵环 + 浅蓝径向圆 + tabler user 图标 = 照片占位(image slot photo_N,运行时换裁圆用户图)", "accent-divider": "姓名/职务下 azure→cyan 短分隔", "watermark-title": "CORE MEMBER 大字水印,id 含 watermark → 豁免 PALETTE"}
+    },
+    {
+      "id": "bz-showcase-01", "content_type": "showcase", "style_family": ["business", "blue", "azure"],
+      "parent_style": "business-blue", "source": "work_inspire_128#slide_097", "canvas": "16:9",
+      "file": "bz-showcase-01.svg",
+      "slots": [
+        {"name": "main_image", "type": "image", "note": "大图占位(运行时填产品/场景图)"},
+        {"name": "eyebrow", "type": "text"},
+        {"name": "title_<N>", "type": "text", "note": "标题按视觉行 title_1/title_2(独立 <text>)"},
+        {"name": "body_<N>", "type": "text", "note": "正文按视觉行 body_1..4(独立 <text>,勿 tspan)"},
+        {"name": "feat_<N>_title", "type": "text", "note": "特性标题 1..3"}, {"name": "feat_<N>_desc", "type": "text"}
+      ],
+      "color_roles": {"#ACD2F2": "media-frame", "#2E86E0": "media-icon", "#98A0AC": "hint/desc", "#079FFE": "eyebrow", "#1F2733": "title/ink-strong", "#5C636E": "body", "#3CC0FF": "icon-from", "#0A66DD": "icon-to", "#FFFFFF": "on-color"},
+      "content_contract": {
+        "title_<N>": {"max_lines": 1, "font_px": [26, 30], "content_box": [640, 0, 568, 40], "overflow": "shrink"},
+        "body_<N>": {"max_lines": 1, "font_px": [14, 15], "content_box": [640, 0, 568, 28], "note": "整段按视觉行手控,勿 tspan"}
+      },
+      "capacity": {"features": [2, 4]},
+      "technique_map": {"media-slot": "圆角卡 + bzMediaFill 浅蓝径向 + tabler photo 图标 + 提示文 = 大图占位(image slot main_image,运行时换产品图)", "feature-icons": "azure→cyan 径向圆盘 + 白 tabler 图标(bulb/trending-up/shield-check)+ 标题/说明", "eyebrow-accent": "azure→cyan 短条 + 眉标", "title-2line": "标题逐视觉行独立 <text>"}
+    },
+    {
+      "id": "bz-closing-01", "content_type": "closing", "style_family": ["business", "blue", "azure"],
+      "parent_style": "business-blue", "source": "work_inspire_128#slide_128", "canvas": "16:9",
+      "file": "bz-closing-01.svg",
+      "slots": [
+        {"name": "title", "type": "text", "default": "感谢观看"},
+        {"name": "subtitle", "type": "text", "default": "THANKS FOR WATCHING"}
+      ],
+      "color_roles": {"#045FD4": "title/primary", "#079FFE": "accent-from/dot", "#54CCFF": "accent-to", "#5C636E": "subtitle", "#ACD2F2": "ghost-ring", "#A8E2FF": "sphere-hi", "#0A52BC": "sphere-deep"},
+      "content_contract": {"title": {"max_lines": 1, "font_px": [64, 92], "content_box": [340, 280, 600, 100], "overflow": "shrink"}},
+      "technique_map": {"centered-thanks": "居中大标题 + accent bar + 英文副标", "solid-title": "渐变标题会被引擎压纯色 → 用实色 primary(要渐变须烘焙 PNG)", "3d-spheres": "5 个径向渐变球散布(高光→azure→deep)", "ghost-rings-halo": "标题后 3 层同心环描边(放 bg-decoration 组 → 豁免门 + 计 decoration_layer)"}
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "source": "学术答辩 PPT灵感手册 25页 (24 slides)",
+  "canvas_px": [1280, 720],
+  "safe_margin_px": { "left": 70, "right": 70, "top": 48, "bottom": 48 },
+  "title_anchor": { "x": 84, "y": 78, "size": 40, "color": "#222A35", "font": "HarmonyOS Sans SC" },
+  "font_floor_px": 10.7,
+  "body_min_px": 16,
+  "font_size_variety_max": 9,
+  "type_scale_px": [40, 32, 26.7, 24, 21.3, 20, 18.7, 16, 10.7],
+  "palette": {
+    "bg": ["#F7F7F9", "#FFFFFF", "#F9F9FB"],
+    "ink": ["#222A35", "#333F50", "#44546A", "#8497B0"],
+    "primary": ["#146DB4", "#58AAEC", "#0F5287", "#C7E3F9"],
+    "on_color": ["#FFFFFF"],
+    "tint": ["#DCEBFB", "#EAF4FD", "#F7FBFE"]
+  },
+  "notes": [
+    "font_floor 校准为 10.7(模板自用的 caption 字号);通用 v1 的 14px 会误报本模板。",
+    "font_size_variety_max 放宽到 9(模板正当使用约 8-9 档字号);通用 v1 的 5 会误报。",
+    "title_anchor 来自 18 个内容页一致的 (84,78,40px) —— 可作为本风格的标题硬规则。"
+  ]
+}

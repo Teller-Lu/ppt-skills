@@ -1,0 +1,83 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="bzCoverBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4F9FF"/><stop offset="0.55" stop-color="#E6F0FC"/><stop offset="1" stop-color="#D4E6FA"/>
+    </linearGradient>
+    <radialGradient id="bzAtm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7FC0FF" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#7FC0FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bzAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#079FFE"/><stop offset="1" stop-color="#54CCFF"/>
+    </linearGradient>
+    <linearGradient id="bzTower" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#74D2FF"/><stop offset="1" stop-color="#0A5FD4"/>
+    </linearGradient>
+    <radialGradient id="bzSphere" cx="0.35" cy="0.3" r="0.85">
+      <stop offset="0" stop-color="#BFEBFF"/><stop offset="0.5" stop-color="#33A0F4"/><stop offset="1" stop-color="#0A52BC"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1280" height="720" fill="url(#bzCoverBg)"/>
+  <g id="bg-decoration">
+    <circle cx="980" cy="120" r="340" fill="url(#bzAtm)"/>
+    <circle cx="180" cy="640" r="240" fill="url(#bzAtm)"/>
+  </g>
+
+  <!-- 精细城市天际线(多层景深 + 玻璃塔 + 窗线 + 天线;背景母题=装饰,出血右/下) -->
+  <g id="skyline-decor">
+    <!-- 远层(浅) -->
+    <g fill="#A9CCEF">
+      <rect x="600" y="372" width="46" height="348" opacity="0.16"/>
+      <rect x="690" y="300" width="64" height="420" opacity="0.18"/>
+      <rect x="1006" y="300" width="78" height="420" opacity="0.16"/>
+      <rect x="1120" y="392" width="52" height="328" opacity="0.16"/>
+      <rect x="1192" y="344" width="92" height="376" opacity="0.18"/>
+    </g>
+    <!-- 中层 -->
+    <g fill="#5E9CE4">
+      <rect x="560" y="468" width="58" height="252" opacity="0.30"/>
+      <rect x="760" y="440" width="50" height="280" opacity="0.30"/>
+      <rect x="974" y="470" width="48" height="250" opacity="0.28"/>
+      <rect x="1080" y="428" width="66" height="292" opacity="0.30"/>
+      <rect x="1206" y="476" width="80" height="244" opacity="0.28"/>
+    </g>
+    <!-- 主玻璃塔(渐变) + 天线 -->
+    <rect x="730" y="258" width="6" height="36" fill="#0A66DD" opacity="0.7"/>
+    <rect x="938" y="196" width="6" height="38" fill="#0A66DD" opacity="0.7"/>
+    <rect x="700" y="292" width="66" height="428" fill="url(#bzTower)" opacity="0.95"/>
+    <rect x="906" y="232" width="72" height="488" fill="url(#bzTower)" opacity="0.92"/>
+    <rect x="800" y="150" width="94" height="570" fill="url(#bzTower)"/>
+    <!-- 窗线/竖框(stroke-opacity,勿组 opacity) -->
+    <g stroke="#FFFFFF" stroke-width="2.4" stroke-opacity="0.22">
+      <line x1="700" y1="338" x2="766" y2="338"/><line x1="700" y1="392" x2="766" y2="392"/><line x1="700" y1="446" x2="766" y2="446"/><line x1="700" y1="500" x2="766" y2="500"/><line x1="700" y1="554" x2="766" y2="554"/>
+      <line x1="733" y1="300" x2="733" y2="710"/>
+      <line x1="800" y1="206" x2="894" y2="206"/><line x1="800" y1="262" x2="894" y2="262"/><line x1="800" y1="318" x2="894" y2="318"/><line x1="800" y1="374" x2="894" y2="374"/><line x1="800" y1="430" x2="894" y2="430"/><line x1="800" y1="486" x2="894" y2="486"/><line x1="800" y1="542" x2="894" y2="542"/>
+      <line x1="832" y1="156" x2="832" y2="710"/><line x1="863" y1="156" x2="863" y2="710"/>
+      <line x1="906" y1="286" x2="978" y2="286"/><line x1="906" y1="340" x2="978" y2="340"/><line x1="906" y1="394" x2="978" y2="394"/><line x1="906" y1="448" x2="978" y2="448"/><line x1="906" y1="502" x2="978" y2="502"/>
+      <line x1="942" y1="240" x2="942" y2="710"/>
+    </g>
+    <!-- 渐变球:大球盖最高塔顶,小球低位 -->
+    <circle cx="847" cy="150" r="50" fill="url(#bzSphere)"/>
+    <circle cx="1086" cy="470" r="30" fill="url(#bzSphere)"/>
+  </g>
+
+  <!-- 左侧标题区 -->
+  <g id="title-block" font-family="'Microsoft YaHei','HarmonyOS Sans SC',sans-serif">
+    <rect x="72" y="108" width="294" height="46" rx="23" fill="#FFFFFF" opacity="0.72"/>
+    <circle cx="98" cy="131" r="15" fill="url(#bzAccent)"/>
+    <use data-icon="tabler-outline/building-skyscraper" x="87" y="120" width="22" height="22" fill="#FFFFFF"/>
+    <text data-slot="eyebrow_tag" x="124" y="138" font-size="18" font-weight="bold" fill="#0A66DD">2024 · 智慧城市白皮书</text>
+
+    <!-- 渐变大标题(烘焙 PNG 保渐变) -->
+    <image data-slot="title_image" xlink:href="bz-cover-01.assets/title.png" href="bz-cover-01.assets/title.png" x="76" y="177" width="504" height="129"/>
+
+    <text data-slot="subtitle" x="76" y="362" font-size="46" font-weight="bold" fill="#1F2733">顶层规划与设计</text>
+    <rect x="78" y="384" width="156" height="8" rx="4" fill="url(#bzAccent)"/>
+    <text data-slot="subtitle_en" x="78" y="420" font-size="17" fill="#5C636E" letter-spacing="3">TOP-LEVEL PLANNING AND DESIGN OF SMART CITIES</text>
+
+    <rect x="74" y="620" width="6" height="48" rx="3" fill="url(#bzAccent)"/>
+    <text data-slot="presenter" x="94" y="642" font-size="19" font-weight="bold" fill="#1F2733">汇报人:Teller-Lu</text>
+    <text data-slot="org_date" x="94" y="668" font-size="15" fill="#5C636E">智慧城市研究院 · 2024.06</text>
+  </g>
+</svg>

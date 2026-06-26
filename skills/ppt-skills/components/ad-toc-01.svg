@@ -1,0 +1,42 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="adBg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#F7FBFE"/><stop offset="1" stop-color="#EAF4FD"/>
+    </linearGradient>
+    <radialGradient id="adAtm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#58AAEC" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#58AAEC" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1C7FD0"/><stop offset="1" stop-color="#0F2E6B"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1280" height="720" fill="url(#adBg)"/>
+  <g id="bg-decoration">
+    <circle cx="1130" cy="150" r="300" fill="url(#adAtm)"/>
+  </g>
+  <!-- 左侧渐变面板 + 弧形右缘(替代照片,保持可复用) -->
+  <path d="M0,0 L470,0 C548,210 470,520 540,720 L0,720 Z" fill="url(#panel)"/>
+  <text data-slot="toc_label" x="74" y="104" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="44" font-weight="bold" fill="#FFFFFF">目录</text>
+  <text x="76" y="144" font-family="Arial, sans-serif" font-size="22" fill="#C7E3F9">CONTENTS</text>
+  <rect x="76" y="162" width="96" height="5" rx="2" fill="#58AAEC"/>
+  <!-- 右侧水印 + 5 条目 -->
+  <text x="676" y="120" font-family="Arial Black, Arial, sans-serif" font-size="60" font-weight="900" fill="#EAF4FD">CONTENTS</text>
+  <g id="entries">
+    <text data-slot="num_1" x="680" y="222" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#146DB4">01</text>
+    <text data-slot="item_1" x="742" y="220" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="24" fill="#222A35">选题背景及意义</text>
+    <rect x="680" y="240" width="500" height="2" fill="#DCEBFB"/>
+    <text data-slot="num_2" x="680" y="298" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#146DB4">02</text>
+    <text data-slot="item_2" x="742" y="296" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="24" fill="#222A35">关键技术与难点</text>
+    <rect x="680" y="316" width="500" height="2" fill="#DCEBFB"/>
+    <text data-slot="num_3" x="680" y="374" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#146DB4">03</text>
+    <text data-slot="item_3" x="742" y="372" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="24" fill="#222A35">研究成果与应用</text>
+    <rect x="680" y="392" width="500" height="2" fill="#DCEBFB"/>
+    <text data-slot="num_4" x="680" y="450" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#146DB4">04</text>
+    <text data-slot="item_4" x="742" y="448" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="24" fill="#222A35">论文综述</text>
+    <rect x="680" y="468" width="500" height="2" fill="#DCEBFB"/>
+    <text data-slot="num_5" x="680" y="526" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#146DB4">05</text>
+    <text data-slot="item_5" x="742" y="524" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="24" fill="#222A35">论文总结</text>
+    <rect x="680" y="544" width="500" height="2" fill="#DCEBFB"/>
+  </g>
+</svg>

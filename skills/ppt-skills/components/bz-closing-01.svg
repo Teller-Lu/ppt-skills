@@ -1,0 +1,45 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bzBg" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#F4F9FF"/><stop offset="1" stop-color="#E2EEFB"/>
+    </linearGradient>
+    <radialGradient id="bzAtm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7FC0FF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#7FC0FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bzAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#079FFE"/><stop offset="1" stop-color="#54CCFF"/>
+    </linearGradient>
+    <radialGradient id="bzSphere" cx="0.35" cy="0.3" r="0.85">
+      <stop offset="0" stop-color="#A8E2FF"/><stop offset="0.5" stop-color="#2E97F2"/><stop offset="1" stop-color="#0A52BC"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1280" height="720" fill="url(#bzBg)"/>
+  <g id="bg-decoration">
+    <circle cx="1080" cy="140" r="300" fill="url(#bzAtm)"/>
+    <circle cx="180" cy="600" r="260" fill="url(#bzAtm)"/>
+    <circle cx="640" cy="318" r="232" fill="none" stroke="#ACD2F2" stroke-width="1.5" stroke-opacity="0.40"/>
+    <circle cx="640" cy="318" r="182" fill="none" stroke="#ACD2F2" stroke-width="1.5" stroke-opacity="0.52"/>
+    <circle cx="640" cy="318" r="132" fill="none" stroke="#ACD2F2" stroke-width="1.5" stroke-opacity="0.66"/>
+    <circle cx="372" cy="126" r="6" fill="#079FFE" opacity="0.5"/>
+    <circle cx="958" cy="598" r="7" fill="#079FFE" opacity="0.5"/>
+    <circle cx="300" cy="470" r="5" fill="#079FFE" opacity="0.45"/>
+  </g>
+
+  <!-- 招牌渐变球 -->
+  <g id="spheres">
+    <circle cx="172" cy="156" r="42" fill="url(#bzSphere)"/>
+    <circle cx="1112" cy="172" r="52" fill="url(#bzSphere)"/>
+    <circle cx="258" cy="560" r="30" fill="url(#bzSphere)"/>
+    <circle cx="1050" cy="548" r="36" fill="url(#bzSphere)"/>
+    <circle cx="640" cy="624" r="22" fill="url(#bzSphere)"/>
+  </g>
+
+  <!-- 居中致谢 -->
+  <g id="thanks" font-family="'Microsoft YaHei','HarmonyOS Sans SC',sans-serif">
+    <text data-slot="title" x="640" y="348" text-anchor="middle" font-size="92" font-weight="bold" fill="#045FD4">感谢观看</text>
+    <rect x="540" y="378" width="200" height="8" rx="4" fill="url(#bzAccent)"/>
+    <text data-slot="subtitle" x="640" y="426" text-anchor="middle" font-size="20" fill="#5C636E" letter-spacing="6">THANKS FOR WATCHING</text>
+  </g>
+</svg>

@@ -1,0 +1,35 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="adBg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#F7FBFE"/><stop offset="1" stop-color="#EAF4FD"/>
+    </linearGradient>
+    <radialGradient id="adAtm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#58AAEC" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#58AAEC" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="adAccent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#146DB4"/><stop offset="1" stop-color="#14319C"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1280" height="720" fill="url(#adBg)"/>
+  <g id="bg-decoration">
+    <circle cx="1130" cy="150" r="290" fill="url(#adAtm)"/>
+    <circle cx="640" cy="430" r="250" fill="none" stroke="#146DB4" stroke-opacity="0.06" stroke-width="1.5"/>
+  </g>
+  <g id="header">
+    <text data-slot="page_title" x="84" y="78" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="40" font-weight="bold" fill="#222A35">参考文献</text>
+    <rect x="84" y="92" width="120" height="6" rx="3" fill="url(#adAccent)"/>
+  </g>
+  <g id="col-left">
+    <text data-slot="ref_1" x="92" y="190" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#44546A"><tspan fill="#146DB4" font-weight="bold">[1] </tspan>作者. 文献标题. 期刊名,<tspan x="92" dy="22">年份, 卷(期): 页码.</tspan></text>
+    <text data-slot="ref_2" x="92" y="276" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#44546A"><tspan fill="#146DB4" font-weight="bold">[2] </tspan>作者. 文献标题. 期刊名,<tspan x="92" dy="22">年份, 卷(期): 页码.</tspan></text>
+    <text data-slot="ref_3" x="92" y="362" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#44546A"><tspan fill="#146DB4" font-weight="bold">[3] </tspan>作者. 文献标题. 期刊名,<tspan x="92" dy="22">年份, 卷(期): 页码.</tspan></text>
+    <text data-slot="ref_4" x="92" y="448" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#44546A"><tspan fill="#146DB4" font-weight="bold">[4] </tspan>作者. 文献标题. 期刊名,<tspan x="92" dy="22">年份, 卷(期): 页码.</tspan></text>
+  </g>
+  <g id="col-right">
+    <text data-slot="ref_5" x="672" y="190" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#44546A"><tspan fill="#146DB4" font-weight="bold">[5] </tspan>作者. 文献标题. 期刊名,<tspan x="672" dy="22">年份, 卷(期): 页码.</tspan></text>
+    <text data-slot="ref_6" x="672" y="276" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#44546A"><tspan fill="#146DB4" font-weight="bold">[6] </tspan>作者. 文献标题. 期刊名,<tspan x="672" dy="22">年份, 卷(期): 页码.</tspan></text>
+    <text data-slot="ref_7" x="672" y="362" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#44546A"><tspan fill="#146DB4" font-weight="bold">[7] </tspan>作者. 文献标题. 期刊名,<tspan x="672" dy="22">年份, 卷(期): 页码.</tspan></text>
+    <text data-slot="ref_8" x="672" y="448" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#44546A"><tspan fill="#146DB4" font-weight="bold">[8] </tspan>作者. 文献标题. 期刊名,<tspan x="672" dy="22">年份, 卷(期): 页码.</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,64 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="adBg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#F7FBFE"/><stop offset="1" stop-color="#EAF4FD"/>
+    </linearGradient>
+    <radialGradient id="adAtm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#58AAEC" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#58AAEC" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="adAccent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#146DB4"/><stop offset="1" stop-color="#14319C"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#58AAEC" stop-opacity="0.10"/>
+      <stop offset="0.5" stop-color="#146DB4" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#58AAEC" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1280" height="720" fill="url(#adBg)"/>
+  <g id="bg-decoration">
+    <circle cx="1130" cy="140" r="300" fill="url(#adAtm)"/>
+    <path d="M0,392 C220,352 420,432 640,396 C860,360 1060,436 1280,392 L1280,470 C1060,508 860,432 640,470 C420,508 220,432 0,470 Z" fill="url(#wave)"/>
+  </g>
+  <g id="header">
+    <text data-slot="page_title" x="84" y="78" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="40" font-weight="bold" fill="#222A35">发展历程</text>
+    <rect x="84" y="92" width="120" height="6" rx="3" fill="url(#adAccent)"/>
+  </g>
+  <line x1="150" y1="380" x2="1030" y2="380" stroke="#C7E3F9" stroke-width="2"/>
+  <!-- node1 ABOVE -->
+  <g id="node-1">
+    <line x1="170" y1="380" x2="170" y2="332" stroke="#146DB4" stroke-width="1.5" stroke-dasharray="3 4"/>
+    <circle cx="170" cy="380" r="11" fill="url(#adAccent)"/><circle cx="170" cy="380" r="4" fill="#FFFFFF"/>
+    <text data-slot="node1_period" x="170" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#146DB4">阶段一</text>
+    <text data-slot="node1_desc" x="170" y="294" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#44546A"><tspan x="170" dy="0">阶段说明第一行,</tspan><tspan x="170" dy="22">第二行收住。</tspan></text>
+  </g>
+  <!-- node2 BELOW -->
+  <g id="node-2">
+    <line x1="380" y1="380" x2="380" y2="428" stroke="#146DB4" stroke-width="1.5" stroke-dasharray="3 4"/>
+    <circle cx="380" cy="380" r="11" fill="url(#adAccent)"/><circle cx="380" cy="380" r="4" fill="#FFFFFF"/>
+    <text data-slot="node2_period" x="380" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#146DB4">阶段二</text>
+    <text data-slot="node2_desc" x="380" y="488" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#44546A"><tspan x="380" dy="0">阶段说明第一行,</tspan><tspan x="380" dy="22">第二行收住。</tspan></text>
+  </g>
+  <!-- node3 ABOVE -->
+  <g id="node-3">
+    <line x1="590" y1="380" x2="590" y2="332" stroke="#146DB4" stroke-width="1.5" stroke-dasharray="3 4"/>
+    <circle cx="590" cy="380" r="11" fill="url(#adAccent)"/><circle cx="590" cy="380" r="4" fill="#FFFFFF"/>
+    <text data-slot="node3_period" x="590" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#146DB4">阶段三</text>
+    <text data-slot="node3_desc" x="590" y="294" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#44546A"><tspan x="590" dy="0">阶段说明第一行,</tspan><tspan x="590" dy="22">第二行收住。</tspan></text>
+  </g>
+  <!-- node4 BELOW -->
+  <g id="node-4">
+    <line x1="800" y1="380" x2="800" y2="428" stroke="#146DB4" stroke-width="1.5" stroke-dasharray="3 4"/>
+    <circle cx="800" cy="380" r="11" fill="url(#adAccent)"/><circle cx="800" cy="380" r="4" fill="#FFFFFF"/>
+    <text data-slot="node4_period" x="800" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#146DB4">阶段四</text>
+    <text data-slot="node4_desc" x="800" y="488" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#44546A"><tspan x="800" dy="0">阶段说明第一行,</tspan><tspan x="800" dy="22">第二行收住。</tspan></text>
+  </g>
+  <!-- node5 ABOVE -->
+  <g id="node-5">
+    <line x1="1010" y1="380" x2="1010" y2="332" stroke="#146DB4" stroke-width="1.5" stroke-dasharray="3 4"/>
+    <circle cx="1010" cy="380" r="11" fill="url(#adAccent)"/><circle cx="1010" cy="380" r="4" fill="#FFFFFF"/>
+    <text data-slot="node5_period" x="1010" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#146DB4">阶段五</text>
+    <text data-slot="node5_desc" x="1010" y="294" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="15" fill="#44546A"><tspan x="1010" dy="0">阶段说明第一行,</tspan><tspan x="1010" dy="22">第二行收住。</tspan></text>
+  </g>
+</svg>

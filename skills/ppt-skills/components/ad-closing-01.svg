@@ -1,0 +1,24 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D6E9FB"/><stop offset="1" stop-color="#F4FAFE"/>
+    </linearGradient>
+    <radialGradient id="moon" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="adAtm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#58AAEC" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#58AAEC" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="1280" height="720" fill="url(#sky)"/>
+  <g id="bg-decoration">
+    <circle cx="640" cy="350" r="220" fill="url(#moon)"/>
+    <circle cx="150" cy="640" r="240" fill="url(#adAtm)"/>
+    <circle cx="1130" cy="120" r="240" fill="url(#adAtm)"/>
+  </g>
+  <text data-slot="thanks_watermark" x="640" y="214" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="112" font-weight="900" fill="#EAF4FD">THANKS</text>
+  <text data-slot="closing_cn" x="640" y="402" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="92" font-weight="bold" fill="#146DB4">敬请指正</text>
+  <text data-slot="closing_sub" x="640" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#44546A">Thanks For Watching !</text>
+</svg>

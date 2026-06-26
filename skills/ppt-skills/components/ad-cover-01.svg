@@ -1,0 +1,34 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="titleGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.62"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#146DB4"/><stop offset="1" stop-color="#0F5287"/>
+    </linearGradient>
+  </defs>
+  <!-- 整幅照片底图(默认占位,可替换为用户自己的图) -->
+  <image data-slot="bg_image" href="ad-cover-01.assets/bg.jpg" x="0" y="0" width="1280" height="720" preserveAspectRatio="xMidYMid slice"/>
+  <!-- 标题柔光,提升可读性(叠加 rect,非 image-opacity) -->
+  <rect x="190" y="236" width="900" height="214" fill="url(#titleGlow)"/>
+  <g id="cover-title">
+    <text data-slot="title" x="640" y="332" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="46" font-weight="bold" fill="#146DB4">2024 年学术风答辩</text>
+    <text data-slot="title_main" x="640" y="406" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="74" font-weight="bold" fill="#0F5287">PPT 灵感手册</text>
+    <text data-slot="subtitle_en" x="640" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#44546A">Academic Defense · PPT Inspiration Handbook</text>
+  </g>
+  <!-- 底部蓝缎带(双层叠) -->
+  <g id="ribbon">
+    <path d="M0,664 C380,628 900,704 1280,640 L1280,720 L0,720 Z" fill="#58AAEC"/>
+    <path d="M0,644 C380,608 900,688 1280,616 L1280,720 L0,720 Z" fill="url(#ribbon)"/>
+  </g>
+  <!-- 底栏 3 个图标项(在缎带上) -->
+  <g id="footer">
+    <use data-icon="tabler-outline/user" x="262" y="676" width="26" height="26" fill="#FFFFFF"/>
+    <text data-slot="presenter" x="298" y="696" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="20" fill="#FFFFFF">答辩人</text>
+    <use data-icon="tabler-outline/school" x="592" y="676" width="26" height="26" fill="#FFFFFF"/>
+    <text data-slot="advisor" x="628" y="696" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="20" fill="#FFFFFF">指导教师</text>
+    <use data-icon="tabler-outline/book" x="922" y="676" width="26" height="26" fill="#FFFFFF"/>
+    <text data-slot="major" x="958" y="696" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="20" fill="#FFFFFF">专业学科</text>
+  </g>
+</svg>

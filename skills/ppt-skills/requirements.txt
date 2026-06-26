@@ -1,0 +1,24 @@
+# ppt-skills 依赖(裁剪版:无 AI 生图、无配音)
+# 安装:pip install -r requirements.txt
+
+# 核心:SVG → 可编辑 PPTX(含 Office 兼容 PNG 兜底)
+python-pptx>=0.6.21
+svglib>=1.5.0
+reportlab>=4.0.0
+
+# 实时预览(localhost 编辑器)
+flask>=3.0.0
+
+# 图片处理(finalize 嵌图 / 用户图元数据 / 烘焙)
+Pillow>=9.0.0
+numpy>=1.20.0
+
+# 源文档 → Markdown(按输入类型按需;不全需要)
+PyMuPDF>=1.23.0          # PDF
+mammoth>=1.6.0           # DOCX
+markdownify>=0.11.6      # HTML/EPUB
+openpyxl>=3.1.0          # XLSX
+requests>=2.31.0         # 网页
+beautifulsoup4>=4.12.0   # 网页
+
+# 已裁剪(不需要):edge-tts(配音)、google-genai(生图)、各 image backend

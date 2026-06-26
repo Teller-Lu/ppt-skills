@@ -1,0 +1,74 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bzBg" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#F4F9FF"/><stop offset="1" stop-color="#E2EEFB"/>
+    </linearGradient>
+    <radialGradient id="bzAtm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7FC0FF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#7FC0FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bzAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#079FFE"/><stop offset="1" stop-color="#54CCFF"/>
+    </linearGradient>
+    <radialGradient id="bzIconDisc" cx="0.4" cy="0.35" r="0.8">
+      <stop offset="0" stop-color="#3CC0FF"/><stop offset="1" stop-color="#0A66DD"/>
+    </radialGradient>
+    <radialGradient id="bzMediaFill" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#EAF3FE"/><stop offset="1" stop-color="#D3E6F8"/>
+    </radialGradient>
+    <filter id="bzCard" x="-15%" y="-15%" width="130%" height="135%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="11"/>
+      <feOffset dx="0" dy="9" result="o"/>
+      <feFlood flood-color="#1C5BB0" flood-opacity="0.13"/>
+      <feComposite in2="o" operator="in" result="s"/>
+      <feMerge><feMergeNode in="s"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1280" height="720" fill="url(#bzBg)"/>
+  <g id="bg-decoration">
+    <circle cx="1120" cy="140" r="300" fill="url(#bzAtm)"/>
+    <circle cx="140" cy="620" r="240" fill="url(#bzAtm)"/>
+  </g>
+
+  <!-- 左:大图占位槽(运行时填产品/场景图) -->
+  <g id="media">
+    <rect data-slot="main_image" x="72" y="150" width="524" height="424" rx="20" fill="url(#bzMediaFill)" stroke="#ACD2F2" stroke-width="1.5" filter="url(#bzCard)"/>
+    <use data-icon="tabler-outline/photo" x="298" y="324" width="72" height="72" fill="#2E86E0"/>
+    <text x="334" y="446" text-anchor="middle" font-family="'Microsoft YaHei',sans-serif" font-size="16" fill="#98A0AC">替换为产品 / 场景图</text>
+  </g>
+
+  <!-- 右:标题 + 正文 + 3 图标特性 -->
+  <g id="content" font-family="'Microsoft YaHei','HarmonyOS Sans SC',sans-serif">
+    <rect x="640" y="158" width="44" height="5" rx="2.5" fill="url(#bzAccent)"/>
+    <text data-slot="eyebrow" x="696" y="172" font-size="15" font-weight="bold" fill="#079FFE" letter-spacing="1">PRODUCT · 产品展示</text>
+
+    <text data-slot="title_1" x="640" y="230" font-size="34" font-weight="bold" fill="#1F2733">VR 赋能商业职场应用</text>
+    <text data-slot="title_2" x="640" y="272" font-size="34" font-weight="bold" fill="#1F2733">效率与质量的关键引擎</text>
+    <rect x="642" y="292" width="120" height="7" rx="3.5" fill="url(#bzAccent)"/>
+
+    <g fill="#5C636E" font-size="17">
+      <text data-slot="body_1" x="640" y="340">通过沉浸式交互与实时数据,VR 在培训、协同与远程</text>
+      <text data-slot="body_2" x="640" y="372">运维等场景显著提升效率与体验;以可视化方式还原真实</text>
+      <text data-slot="body_3" x="640" y="404">业务流程,降低试错成本,加速从认知到决策的闭环,</text>
+      <text data-slot="body_4" x="640" y="436">成为企业数字化升级的关键引擎。</text>
+    </g>
+
+    <g id="features">
+      <circle cx="664" cy="508" r="24" fill="url(#bzIconDisc)"/>
+      <use data-icon="tabler-outline/bulb" x="650" y="494" width="28" height="28" fill="#FFFFFF"/>
+      <text data-slot="feat_1_title" x="702" y="503" font-size="16" font-weight="bold" fill="#1F2733">智能助手</text>
+      <text data-slot="feat_1_desc" x="702" y="524" font-size="15" fill="#98A0AC">全天候响应</text>
+
+      <circle cx="854" cy="508" r="24" fill="url(#bzIconDisc)"/>
+      <use data-icon="tabler-outline/trending-up" x="840" y="494" width="28" height="28" fill="#FFFFFF"/>
+      <text data-slot="feat_2_title" x="892" y="503" font-size="16" font-weight="bold" fill="#1F2733">预测分析</text>
+      <text data-slot="feat_2_desc" x="892" y="524" font-size="15" fill="#98A0AC">自动应用</text>
+
+      <circle cx="1044" cy="508" r="24" fill="url(#bzIconDisc)"/>
+      <use data-icon="tabler-outline/shield-check" x="1030" y="494" width="28" height="28" fill="#FFFFFF"/>
+      <text data-slot="feat_3_title" x="1082" y="503" font-size="16" font-weight="bold" fill="#1F2733">数据安全</text>
+      <text data-slot="feat_3_desc" x="1082" y="524" font-size="15" fill="#98A0AC">精准决策</text>
+    </g>
+  </g>
+</svg>

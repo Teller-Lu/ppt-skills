@@ -1,0 +1,30 @@
+{
+  "source": "工作型2.0 PPT灵感手册 128页 (work_inspire_128)",
+  "canvas_px": [1280, 720],
+  "safe_margin_px": { "left": 64, "right": 64, "top": 44, "bottom": 44 },
+  "title_anchor": { "x": 76, "y": 64, "size": 28, "color": "#1F2733", "font": "Microsoft YaHei" },
+  "font_floor_px": 14,
+  "body_min_px": 16,
+  "headline_min_px": 30,
+  "min_fill_w_ratio": 0.66,
+  "min_fill_h_ratio": 0.5,
+  "font_size_variety_max": 9,
+  "type_scale_px": [90, 64, 40, 34, 28, 24, 20, 17, 14],
+  "palette": {
+    "bg": ["#F4F7FC", "#EBF2FD", "#F0F6FE", "#FFFFFF", "#F7FBFF"],
+    "ink": ["#1F2733", "#222A35", "#2A2A2B", "#5C636E", "#5C5E62", "#98A0AC", "#989EA7"],
+    "primary": ["#045FD4", "#0A5FD4", "#0275FE", "#054DAB"],
+    "deep": ["#012C6D", "#003891", "#06286A"],
+    "accent": ["#079FFE", "#06A1FE", "#0A9FFE", "#28A1FF", "#118DE3"],
+    "cyan": ["#3FC0FF", "#54CCFF", "#63C7FE", "#59B0FF"],
+    "periwinkle": ["#4D78DF", "#6990E6", "#95AFEC", "#295EDB"],
+    "tint": ["#DCEBFB", "#ACD2F2", "#ACCCE9", "#ACD8F9", "#B0D1EF", "#E1EFFC"],
+    "on_color": ["#FFFFFF"]
+  },
+  "notes": [
+    "提炼自 128 页真渲染:字体实际主力为微软雅黑(217);大号装饰数字模板用 Bebas(非系统字体)→ 烘焙。",
+    "safe_margin / title_anchor / 字号档为初值(部分沿用学术校准),批A 开全分辨率核定后微调。",
+    "2026-06-15 可读性重校准(用户反馈 AI 小字+胆怯留白):font_floor 10.5→13、body_min 13→16、字号档整体上调贴模板;新增 headline_min_px(每页最大字号下限,防无显眼标题)、min_fill_w/h_ratio(内容横/纵占版率下限,拦截缩中央留大白)。参见记忆 ppt-readable-scale。",
+    "招牌色 = accent#079FFE → cyan#54CCFF 渐变;章节 deep navy 反白;封面 periwinkle 柔和渐变。"
+  ]
+}

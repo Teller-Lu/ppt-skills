@@ -1,0 +1,35 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="adBg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#F7FBFE"/><stop offset="1" stop-color="#EAF4FD"/>
+    </linearGradient>
+    <radialGradient id="adAtm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#58AAEC" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#58AAEC" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="adAccent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#146DB4"/><stop offset="1" stop-color="#14319C"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1280" height="720" fill="url(#adBg)"/>
+  <!-- T2 氛围圆(半出血,营造层次) -->
+  <g id="bg-decoration">
+    <circle cx="240" cy="600" r="430" fill="url(#adAtm)"/>
+    <circle cx="1090" cy="120" r="300" fill="url(#adAtm)"/>
+  </g>
+  <!-- 背景幽灵数字(衬底层,纯色引擎安全) -->
+  <g id="bg-ghost-number">
+    <text data-slot="section_number" x="150" y="560" font-family="Arial Black, Arial, sans-serif" font-size="440" font-weight="900" fill="#E7E6E6">02</text>
+  </g>
+  <!-- 前景花式数字:渐变填充烘焙成 PNG(文字图片填充无 PPT 路径) -->
+  <g id="section-number">
+    <image data-slot="section_number_image" href="ad-section-01.assets/num_02.png" x="175" y="190" width="470" height="352" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+  <!-- 标题区:渐变 accent 竖条 + 标题 + part + 渐变下划线 -->
+  <g id="section-title">
+    <rect x="706" y="298" width="10" height="124" rx="5" fill="url(#adAccent)"/>
+    <text data-slot="section_title" x="742" y="362" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="60" font-weight="bold" fill="#222A35">研究方法与数据</text>
+    <text data-slot="part_label" x="744" y="404" font-family="Arial, sans-serif" font-size="22" fill="#146DB4">PART TWO</text>
+    <rect x="744" y="426" width="190" height="4" rx="2" fill="url(#adAccent)"/>
+  </g>
+</svg>

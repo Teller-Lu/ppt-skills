@@ -1,0 +1,113 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bzBg" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#F4F9FF"/><stop offset="1" stop-color="#E2EEFB"/>
+    </linearGradient>
+    <radialGradient id="bzAtm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7FC0FF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#7FC0FF" stop-opacity="0"/>
+    </radialGradient>
+    <!-- 小编号六边形渐变 -->
+    <linearGradient id="bzHexGrad" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#36B6FF"/><stop offset="1" stop-color="#0A5FD4"/>
+    </linearGradient>
+    <!-- 中心核心:光泽蓝渐变(左上亮→右下深) -->
+    <linearGradient id="bzCore" x1="0.1" y1="0" x2="0.75" y2="1">
+      <stop offset="0" stop-color="#48B8FF"/><stop offset="0.5" stop-color="#1A82F0"/><stop offset="1" stop-color="#0A56CC"/>
+    </linearGradient>
+    <!-- 顶部高光泽面(白→透明竖向) -->
+    <linearGradient id="bzSheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.5"/>
+      <stop offset="0.52" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <!-- 中心徽标浮起投影 -->
+    <filter id="bzEmblem" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="13"/>
+      <feOffset dx="0" dy="12" result="o"/>
+      <feFlood flood-color="#1C5BB0" flood-opacity="0.24"/>
+      <feComposite in2="o" operator="in" result="s"/>
+      <feMerge><feMergeNode in="s"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- 白卡投影 -->
+    <filter id="bzCard" x="-15%" y="-30%" width="130%" height="170%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9"/>
+      <feOffset dx="0" dy="6" result="o"/>
+      <feFlood flood-color="#1C5BB0" flood-opacity="0.14"/>
+      <feComposite in2="o" operator="in" result="s"/>
+      <feMerge><feMergeNode in="s"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1280" height="720" fill="url(#bzBg)"/>
+  <g id="bg-decoration">
+    <circle cx="1090" cy="120" r="300" fill="url(#bzAtm)"/>
+    <circle cx="170" cy="610" r="250" fill="url(#bzAtm)"/>
+    <!-- 角落幽灵六边形(flat-top,与主母题同向) -->
+    <polygon points="250,150 320,28 460,28 530,150 460,272 320,272" fill="none" stroke="#BBD5F5" stroke-width="1.5" stroke-opacity="0.26"/>
+    <polygon points="820,560 890,438 1030,438 1100,560 1030,682 890,682" fill="none" stroke="#BBD5F5" stroke-width="1.5" stroke-opacity="0.22"/>
+  </g>
+
+  <text id="contents-watermark" x="640" y="86" text-anchor="middle" font-family="'Microsoft YaHei',sans-serif" font-size="40" font-weight="bold" fill="#A9BBD2" letter-spacing="14">CONTENTS</text>
+
+  <!-- ===== 中心六边形徽标(三层 3D:淡蓝halo + 白斜边圈 + 光泽核心 + 顶部高光) ===== -->
+  <g id="center-emblem" font-family="'Microsoft YaHei',sans-serif">
+    <!-- 外圈淡蓝 halo -->
+    <polygon points="816,360 728,207.6 552,207.6 464,360 552,512.4 728,512.4" fill="#D6E9FF" opacity="0.55"/>
+    <!-- 白色斜边圈(带投影,整体浮起) -->
+    <polygon points="796,360 718,224.9 562,224.9 484,360 562,495.1 718,495.1" fill="#FFFFFF" filter="url(#bzEmblem)"/>
+    <!-- 光泽蓝核心(白细描边=内白边,圆角) -->
+    <polygon points="784,360 712,235.3 568,235.3 496,360 568,484.7 712,484.7" fill="url(#bzCore)" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- 顶部高光泽面 -->
+    <polygon points="778,360 709,240.5 571,240.5 502,360 571,479.5 709,479.5" fill="url(#bzSheen)"/>
+    <text x="640" y="381" text-anchor="middle" font-size="58" font-weight="bold" fill="#FFFFFF" letter-spacing="4">目录</text>
+  </g>
+
+  <!-- ===== 6 条目:实心白卡 + flat-top 圆角白边编号六边形 + PART 眉标 + 标题 ===== -->
+  <g id="items" font-family="'Microsoft YaHei','HarmonyOS Sans SC',sans-serif">
+    <!-- 左列 -->
+    <g id="item-1">
+      <rect x="104" y="136" width="250" height="78" rx="39" fill="#FFFFFF" filter="url(#bzCard)"/>
+      <polygon points="158,175 145,152.5 119,152.5 106,175 119,197.5 145,197.5" fill="url(#bzHexGrad)" stroke="#FFFFFF" stroke-width="4.5" stroke-linejoin="round"/>
+      <text x="132" y="183" text-anchor="middle" font-size="20" font-weight="bold" fill="#FFFFFF">01</text>
+      <text data-slot="eyebrow_1" x="178" y="166" font-size="15" fill="#98A0AC" letter-spacing="1.5">PART ONE</text>
+      <text data-slot="item_1" x="178" y="196" font-size="26" font-weight="bold" fill="#1F2733">背景分析</text>
+    </g>
+    <g id="item-3">
+      <rect x="104" y="321" width="250" height="78" rx="39" fill="#FFFFFF" filter="url(#bzCard)"/>
+      <polygon points="158,360 145,337.5 119,337.5 106,360 119,382.5 145,382.5" fill="url(#bzHexGrad)" stroke="#FFFFFF" stroke-width="4.5" stroke-linejoin="round"/>
+      <text x="132" y="368" text-anchor="middle" font-size="20" font-weight="bold" fill="#FFFFFF">03</text>
+      <text data-slot="eyebrow_3" x="178" y="351" font-size="15" fill="#98A0AC" letter-spacing="1.5">PART THREE</text>
+      <text data-slot="item_3" x="178" y="381" font-size="26" font-weight="bold" fill="#1F2733">经济环境</text>
+    </g>
+    <g id="item-5">
+      <rect x="104" y="506" width="250" height="78" rx="39" fill="#FFFFFF" filter="url(#bzCard)"/>
+      <polygon points="158,545 145,522.5 119,522.5 106,545 119,567.5 145,567.5" fill="url(#bzHexGrad)" stroke="#FFFFFF" stroke-width="4.5" stroke-linejoin="round"/>
+      <text x="132" y="553" text-anchor="middle" font-size="20" font-weight="bold" fill="#FFFFFF">05</text>
+      <text data-slot="eyebrow_5" x="178" y="536" font-size="15" fill="#98A0AC" letter-spacing="1.5">PART FIVE</text>
+      <text data-slot="item_5" x="178" y="566" font-size="26" font-weight="bold" fill="#1F2733">技术支持</text>
+    </g>
+    <!-- 右列 -->
+    <g id="item-2">
+      <rect x="926" y="136" width="250" height="78" rx="39" fill="#FFFFFF" filter="url(#bzCard)"/>
+      <polygon points="1174,175 1161,152.5 1135,152.5 1122,175 1135,197.5 1161,197.5" fill="url(#bzHexGrad)" stroke="#FFFFFF" stroke-width="4.5" stroke-linejoin="round"/>
+      <text x="1148" y="183" text-anchor="middle" font-size="20" font-weight="bold" fill="#FFFFFF">02</text>
+      <text data-slot="eyebrow_2" x="1102" y="166" text-anchor="end" font-size="15" fill="#98A0AC" letter-spacing="1.5">PART TWO</text>
+      <text data-slot="item_2" x="1102" y="196" text-anchor="end" font-size="26" font-weight="bold" fill="#1F2733">政策监管</text>
+    </g>
+    <g id="item-4">
+      <rect x="926" y="321" width="250" height="78" rx="39" fill="#FFFFFF" filter="url(#bzCard)"/>
+      <polygon points="1174,360 1161,337.5 1135,337.5 1122,360 1135,382.5 1161,382.5" fill="url(#bzHexGrad)" stroke="#FFFFFF" stroke-width="4.5" stroke-linejoin="round"/>
+      <text x="1148" y="368" text-anchor="middle" font-size="20" font-weight="bold" fill="#FFFFFF">04</text>
+      <text data-slot="eyebrow_4" x="1102" y="351" text-anchor="end" font-size="15" fill="#98A0AC" letter-spacing="1.5">PART FOUR</text>
+      <text data-slot="item_4" x="1102" y="381" text-anchor="end" font-size="26" font-weight="bold" fill="#1F2733">用户规模</text>
+    </g>
+    <g id="item-6">
+      <rect x="926" y="506" width="250" height="78" rx="39" fill="#FFFFFF" filter="url(#bzCard)"/>
+      <polygon points="1174,545 1161,522.5 1135,522.5 1122,545 1135,567.5 1161,567.5" fill="url(#bzHexGrad)" stroke="#FFFFFF" stroke-width="4.5" stroke-linejoin="round"/>
+      <text x="1148" y="553" text-anchor="middle" font-size="20" font-weight="bold" fill="#FFFFFF">06</text>
+      <text data-slot="eyebrow_6" x="1102" y="536" text-anchor="end" font-size="15" fill="#98A0AC" letter-spacing="1.5">PART SIX</text>
+      <text data-slot="item_6" x="1102" y="566" text-anchor="end" font-size="26" font-weight="bold" fill="#1F2733">资本支持</text>
+    </g>
+  </g>
+</svg>

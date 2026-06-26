@@ -1,0 +1,70 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bzBg" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#F7FBFF"/><stop offset="1" stop-color="#E9F1FC"/>
+    </linearGradient>
+    <radialGradient id="bzAtm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#59B0FF" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#59B0FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bzAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#079FFE"/><stop offset="1" stop-color="#54CCFF"/>
+    </linearGradient>
+    <linearGradient id="bzRightDisc" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#3CB6FF"/><stop offset="1" stop-color="#0A66DD"/>
+    </linearGradient>
+    <filter id="bzShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="11"/>
+      <feOffset dx="0" dy="9" result="o"/>
+      <feFlood flood-color="#045FD4" flood-opacity="0.18"/>
+      <feComposite in2="o" operator="in" result="s"/>
+      <feMerge><feMergeNode in="s"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1280" height="720" fill="url(#bzBg)"/>
+  <g id="bg-decoration">
+    <circle cx="1140" cy="120" r="300" fill="url(#bzAtm)"/>
+    <circle cx="150" cy="660" r="260" fill="url(#bzAtm)"/>
+  </g>
+  <g id="bg-ghost-rings">
+    <circle cx="640" cy="396" r="262" fill="none" stroke="#079FFE" stroke-opacity="0.16" stroke-width="1.5"/>
+    <circle cx="640" cy="396" r="200" fill="none" stroke="#079FFE" stroke-opacity="0.12" stroke-width="1.5"/>
+    <circle cx="640" cy="396" r="150" fill="none" stroke="#54CCFF" stroke-opacity="0.18" stroke-width="1.5"/>
+  </g>
+
+  <g id="header">
+    <text data-slot="page_title" x="76" y="74" font-family="'Microsoft YaHei','HarmonyOS Sans SC',sans-serif" font-size="34" font-weight="bold" fill="#1F2733">人工质检与 AI 智能质检对比</text>
+    <rect x="76" y="92" width="156" height="6" rx="3" fill="url(#bzAccent)"/>
+  </g>
+
+  <!-- 左圆:传统人工质检(浅色) -->
+  <g id="disc-left">
+    <circle cx="572" cy="396" r="136" fill="#E9F3FF" stroke="#ACD2F2" stroke-width="1.5"/>
+    <use data-icon="tabler-outline/file-search" x="486" y="310" width="44" height="44" fill="#0A66DD"/>
+    <text data-slot="left_label_1" x="508" y="392" text-anchor="middle" font-family="'Microsoft YaHei',sans-serif" font-size="26" font-weight="bold" fill="#1F2733">传统人工</text>
+    <text data-slot="left_label_2" x="508" y="422" text-anchor="middle" font-family="'Microsoft YaHei',sans-serif" font-size="26" font-weight="bold" fill="#1F2733">质检</text>
+  </g>
+  <!-- 右圆:AI 智能质检(渐变,叠在左圆上) -->
+  <g id="disc-right">
+    <circle cx="708" cy="396" r="136" fill="url(#bzRightDisc)" filter="url(#bzShadow)"/>
+    <use data-icon="tabler-outline/cpu" x="750" y="310" width="44" height="44" fill="#FFFFFF"/>
+    <text data-slot="right_label_1" x="772" y="392" text-anchor="middle" font-family="'Microsoft YaHei',sans-serif" font-size="26" font-weight="bold" fill="#FFFFFF">AI 智能</text>
+    <text data-slot="right_label_2" x="772" y="422" text-anchor="middle" font-family="'Microsoft YaHei',sans-serif" font-size="26" font-weight="bold" fill="#FFFFFF">质检</text>
+  </g>
+
+  <!-- 左侧 4 要点(右对齐,点贴向圆) -->
+  <g id="points-left" font-family="'Microsoft YaHei',sans-serif" font-size="18" fill="#5C636E">
+    <circle cx="318" cy="235" r="5" fill="#079FFE"/><text data-slot="left_p1" x="300" y="240" text-anchor="end">抽检量少,仅覆盖全量的 5%</text>
+    <circle cx="318" cy="317" r="5" fill="#079FFE"/><text data-slot="left_p2" x="300" y="322" text-anchor="end">人工描述主观,结果容易失真</text>
+    <circle cx="318" cy="399" r="5" fill="#079FFE"/><text data-slot="left_p3" x="300" y="404" text-anchor="end">人为判断滞后,响应不及时</text>
+    <circle cx="318" cy="481" r="5" fill="#079FFE"/><text data-slot="left_p4" x="300" y="486" text-anchor="end">抽检受经验与情绪因素影响</text>
+  </g>
+  <!-- 右侧 4 要点(左对齐) -->
+  <g id="points-right" font-family="'Microsoft YaHei',sans-serif" font-size="18" fill="#5C636E">
+    <circle cx="962" cy="235" r="5" fill="#079FFE"/><text data-slot="right_p1" x="980" y="240">质检全量覆盖所有沟通数据</text>
+    <circle cx="962" cy="317" r="5" fill="#079FFE"/><text data-slot="right_p2" x="980" y="322">机器模型质检,客观公正</text>
+    <circle cx="962" cy="399" r="5" fill="#079FFE"/><text data-slot="right_p3" x="980" y="404">规则统一判断,实时推送</text>
+    <circle cx="962" cy="481" r="5" fill="#079FFE"/><text data-slot="right_p4" x="980" y="486">精准追踪客户的真实反馈</text>
+  </g>
+</svg>

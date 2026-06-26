@@ -1,0 +1,86 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bzBg" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#F7FBFF"/><stop offset="1" stop-color="#E9F1FC"/>
+    </linearGradient>
+    <radialGradient id="bzAtm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#59B0FF" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#59B0FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bzAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#079FFE"/><stop offset="1" stop-color="#54CCFF"/>
+    </linearGradient>
+    <radialGradient id="bzIconDisc" cx="0.4" cy="0.35" r="0.8">
+      <stop offset="0" stop-color="#3CC0FF"/><stop offset="1" stop-color="#0A66DD"/>
+    </radialGradient>
+    <filter id="bzCard" x="-20%" y="-20%" width="140%" height="150%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9"/>
+      <feOffset dx="0" dy="8" result="o"/>
+      <feFlood flood-color="#1C5BB0" flood-opacity="0.14"/>
+      <feComposite in2="o" operator="in" result="s"/>
+      <feMerge><feMergeNode in="s"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1280" height="720" fill="url(#bzBg)"/>
+  <g id="bg-decoration">
+    <circle cx="1150" cy="110" r="300" fill="url(#bzAtm)"/>
+    <circle cx="120" cy="650" r="250" fill="url(#bzAtm)"/>
+  </g>
+
+  <g id="header">
+    <text data-slot="page_title" x="76" y="74" font-family="'Microsoft YaHei','HarmonyOS Sans SC',sans-serif" font-size="34" font-weight="bold" fill="#1F2733">平台三大主题模块顺势而生</text>
+    <rect x="76" y="92" width="156" height="6" rx="3" fill="url(#bzAccent)"/>
+  </g>
+
+  <!-- 卡1 成本节约 -->
+  <g id="card-1" font-family="'Microsoft YaHei','HarmonyOS Sans SC',sans-serif">
+    <rect x="64" y="150" width="360" height="400" rx="14" fill="#FFFFFF" filter="url(#bzCard)"/>
+    <circle cx="244" cy="238" r="40" fill="url(#bzIconDisc)"/>
+    <use data-icon="tabler-outline/coin-yuan" x="224" y="218" width="40" height="40" fill="#FFFFFF"/>
+    <text data-slot="card1_title" x="244" y="332" text-anchor="middle" font-size="27" font-weight="bold" fill="#045FD4">成本节约</text>
+    <text data-slot="card1_body" x="244" y="376" text-anchor="middle" font-size="17" fill="#5C636E">
+      <tspan x="244" dy="0">通过对企业各类差旅场景</tspan>
+      <tspan x="244" dy="26">建模与分析,帮助企业获</tspan>
+      <tspan x="244" dy="26">得更优价格,及时发现更</tspan>
+      <tspan x="244" dy="26">多潜在节约机会,实现差</tspan>
+      <tspan x="244" dy="26">旅成本最大化</tspan>
+    </text>
+  </g>
+
+  <!-- 卡2 管理成熟度 -->
+  <g id="card-2" font-family="'Microsoft YaHei','HarmonyOS Sans SC',sans-serif">
+    <rect x="460" y="150" width="360" height="400" rx="14" fill="#FFFFFF" filter="url(#bzCard)"/>
+    <circle cx="640" cy="238" r="40" fill="url(#bzIconDisc)"/>
+    <use data-icon="tabler-outline/clipboard-check" x="620" y="218" width="40" height="40" fill="#FFFFFF"/>
+    <text data-slot="card2_title" x="640" y="332" text-anchor="middle" font-size="27" font-weight="bold" fill="#045FD4">管理成熟度</text>
+    <text data-slot="card2_body" x="640" y="376" text-anchor="middle" font-size="17" fill="#5C636E">
+      <tspan x="640" dy="0">从降本增效、外部合规、</tspan>
+      <tspan x="640" dy="26">内控、智能化、体验五大</tspan>
+      <tspan x="640" dy="26">维度对企业费用管理水平</tspan>
+      <tspan x="640" dy="26">进行评估与分析,并提供</tspan>
+      <tspan x="640" dy="26">费用管理建议</tspan>
+    </text>
+  </g>
+
+  <!-- 卡3 费用风控 -->
+  <g id="card-3" font-family="'Microsoft YaHei','HarmonyOS Sans SC',sans-serif">
+    <rect x="856" y="150" width="360" height="400" rx="14" fill="#FFFFFF" filter="url(#bzCard)"/>
+    <circle cx="1036" cy="238" r="40" fill="url(#bzIconDisc)"/>
+    <use data-icon="tabler-outline/shield-check" x="1016" y="218" width="40" height="40" fill="#FFFFFF"/>
+    <text data-slot="card3_title" x="1036" y="332" text-anchor="middle" font-size="27" font-weight="bold" fill="#045FD4">费用风控</text>
+    <text data-slot="card3_body" x="1036" y="376" text-anchor="middle" font-size="17" fill="#5C636E">
+      <tspan x="1036" dy="0">通过建立各类风险模型,</tspan>
+      <tspan x="1036" dy="26">从繁杂报销数据中发现不</tspan>
+      <tspan x="1036" dy="26">合规报销行为,帮助企业</tspan>
+      <tspan x="1036" dy="26">构建合规体系,杜绝违规</tspan>
+      <tspan x="1036" dy="26">费用</tspan>
+    </text>
+  </g>
+
+  <!-- 底部 ribbon 总结句 -->
+  <g id="footer">
+    <rect x="150" y="582" width="980" height="50" rx="25" fill="url(#bzAccent)" filter="url(#bzCard)"/>
+    <text data-slot="footer_note" x="640" y="613" text-anchor="middle" font-family="'Microsoft YaHei','HarmonyOS Sans SC',sans-serif" font-size="18" fill="#FFFFFF">将机器学习与模型分析技术融合,为企业提供有观点、有价值的数据分析模型</text>
+  </g>
+</svg>

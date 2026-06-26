@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="adBg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#F7FBFE"/><stop offset="1" stop-color="#EAF4FD"/>
+    </linearGradient>
+    <radialGradient id="adAtm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#58AAEC" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#58AAEC" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="adAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#146DB4"/><stop offset="1" stop-color="#0F5287"/>
+    </linearGradient>
+    <linearGradient id="grp" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1C7FD0"/><stop offset="1" stop-color="#14319C"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1280" height="720" fill="url(#adBg)"/>
+  <g id="bg-decoration">
+    <circle cx="1130" cy="150" r="280" fill="url(#adAtm)"/>
+  </g>
+  <g id="header">
+    <text data-slot="page_title" x="84" y="78" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="40" font-weight="bold" fill="#222A35">对比分析表</text>
+    <rect x="84" y="92" width="120" height="6" rx="3" fill="url(#adAccent)"/>
+  </g>
+  <!-- 行底纹(斑马) -->
+  <g id="rows-bg">
+    <rect x="70" y="206" width="1140" height="66" fill="#FFFFFF"/>
+    <rect x="70" y="272" width="1140" height="66" fill="#EAF4FD"/>
+    <rect x="70" y="338" width="1140" height="66" fill="#FFFFFF"/>
+    <rect x="70" y="404" width="1140" height="66" fill="#EAF4FD"/>
+  </g>
+  <!-- 分组标签列 -->
+  <g id="group-cells">
+    <rect x="70" y="206" width="150" height="132" rx="0" fill="url(#grp)"/>
+    <rect x="70" y="338" width="150" height="132" rx="0" fill="url(#grp)"/>
+    <text data-slot="group_1" x="145" y="280" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF">分组一</text>
+    <text data-slot="group_2" x="145" y="412" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF">分组二</text>
+  </g>
+  <!-- 表头 -->
+  <g id="table-head">
+    <rect x="70" y="150" width="1140" height="56" fill="url(#adAccent)"/>
+    <text data-slot="h1" x="145" y="186" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="20" fill="#FFFFFF">元素</text>
+    <text data-slot="h2" x="335" y="186" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="20" fill="#FFFFFF">设施</text>
+    <text data-slot="h3" x="560" y="186" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="20" fill="#FFFFFF">视认距离</text>
+    <text data-slot="h4" x="840" y="186" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="20" fill="#FFFFFF">作用</text>
+    <text data-slot="h5" x="1110" y="186" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="20" fill="#FFFFFF">强度</text>
+  </g>
+  <!-- 单元格文字 -->
+  <g id="cells">
+    <text data-slot="r1c2" x="335" y="246" text-anchor="middle" font-size="18" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" fill="#222A35">设施甲</text>
+    <text data-slot="r1c3" x="560" y="246" text-anchor="middle" font-size="18" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" fill="#333F50">简单决策视距</text>
+    <text data-slot="r1c4" x="840" y="246" text-anchor="middle" font-size="17" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" fill="#44546A">该项作用的简要描述</text>
+    <text data-slot="r1c5" x="1110" y="247" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" fill="#146DB4">★★★★☆</text>
+    <text data-slot="r2c2" x="335" y="312" text-anchor="middle" font-size="18" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" fill="#222A35">设施乙</text>
+    <text data-slot="r2c3" x="560" y="312" text-anchor="middle" font-size="18" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" fill="#333F50">简单决策视距</text>
+    <text data-slot="r2c4" x="840" y="312" text-anchor="middle" font-size="17" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" fill="#44546A">该项作用的简要描述</text>
+    <text data-slot="r2c5" x="1110" y="313" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" fill="#146DB4">★★★☆☆</text>
+    <text data-slot="r3c2" x="335" y="378" text-anchor="middle" font-size="18" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" fill="#222A35">设施丙</text>
+    <text data-slot="r3c3" x="560" y="378" text-anchor="middle" font-size="18" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" fill="#333F50">复杂决策视距</text>
+    <text data-slot="r3c4" x="840" y="378" text-anchor="middle" font-size="17" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" fill="#44546A">该项作用的简要描述</text>
+    <text data-slot="r3c5" x="1110" y="379" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" fill="#146DB4">★★★★☆</text>
+    <text data-slot="r4c2" x="335" y="444" text-anchor="middle" font-size="18" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" fill="#222A35">设施丁</text>
+    <text data-slot="r4c3" x="560" y="444" text-anchor="middle" font-size="18" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" fill="#333F50">复杂决策视距</text>
+    <text data-slot="r4c4" x="840" y="444" text-anchor="middle" font-size="17" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" fill="#44546A">该项作用的简要描述</text>
+    <text data-slot="r4c5" x="1110" y="445" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" fill="#146DB4">★★☆☆☆</text>
+  </g>
+</svg>

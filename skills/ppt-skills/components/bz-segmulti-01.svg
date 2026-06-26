@@ -1,0 +1,85 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bzBg" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#F7FBFF"/><stop offset="1" stop-color="#E9F1FC"/>
+    </linearGradient>
+    <radialGradient id="bzAtm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#59B0FF" stop-opacity="0.13"/>
+      <stop offset="1" stop-color="#59B0FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bzHexGrad" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#36B6FF"/><stop offset="1" stop-color="#0A5FD4"/>
+    </linearGradient>
+    <radialGradient id="bzIconDisc" cx="0.4" cy="0.35" r="0.8">
+      <stop offset="0" stop-color="#3CC0FF"/><stop offset="1" stop-color="#0A66DD"/>
+    </radialGradient>
+    <filter id="bzShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="11"/>
+      <feOffset dx="0" dy="9" result="o"/>
+      <feFlood flood-color="#1C5BB0" flood-opacity="0.18"/>
+      <feComposite in2="o" operator="in" result="s"/>
+      <feMerge><feMergeNode in="s"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1280" height="720" fill="url(#bzBg)"/>
+  <g id="bg-decoration">
+    <circle cx="1160" cy="120" r="280" fill="url(#bzAtm)"/>
+    <circle cx="120" cy="640" r="250" fill="url(#bzAtm)"/>
+    <polygon points="300,360 470,65 810,65 980,360 810,655 470,655" fill="#E4EEFB" stroke="#079FFE" stroke-opacity="0.22" stroke-width="1.5"/>
+    <polygon points="395,360 520,143 760,143 885,360 760,577 520,577" fill="none" stroke="#54CCFF" stroke-opacity="0.20" stroke-width="1.5"/>
+  </g>
+
+  <!-- 中心六边形(放大) -->
+  <g id="hub">
+    <polygon points="498,350 569,227 711,227 782,350 711,473 569,473" fill="url(#bzHexGrad)" filter="url(#bzShadow)"/>
+    <text data-slot="center_title_1" x="640" y="340" text-anchor="middle" font-family="'Microsoft YaHei','HarmonyOS Sans SC',sans-serif" font-size="33" font-weight="bold" fill="#FFFFFF">数字化</text>
+    <text data-slot="center_title_2" x="640" y="384" text-anchor="middle" font-family="'Microsoft YaHei','HarmonyOS Sans SC',sans-serif" font-size="33" font-weight="bold" fill="#FFFFFF">五大支柱</text>
+  </g>
+
+  <!-- 支柱1 共同协作(左上,右对齐) -->
+  <g id="pillar-1" font-family="'Microsoft YaHei',sans-serif">
+    <circle cx="358" cy="182" r="40" fill="url(#bzIconDisc)"/>
+    <use data-icon="tabler-outline/users-group" x="336" y="160" width="44" height="44" fill="#FFFFFF"/>
+    <text data-slot="p1_title" x="305" y="174" text-anchor="end" font-size="26" font-weight="bold" fill="#045FD4">共同协作</text>
+    <text data-slot="p1_desc" x="305" y="204" text-anchor="end" font-size="17" fill="#5C636E">
+      <tspan x="305" dy="0">组织及发展生态系统中</tspan><tspan x="305" dy="26">的伙伴共同协作</tspan>
+    </text>
+  </g>
+  <!-- 支柱2 数据驱动(左下,右对齐) -->
+  <g id="pillar-2" font-family="'Microsoft YaHei',sans-serif">
+    <circle cx="300" cy="410" r="40" fill="url(#bzIconDisc)"/>
+    <use data-icon="tabler-outline/report-analytics" x="278" y="388" width="44" height="44" fill="#FFFFFF"/>
+    <text data-slot="p2_title" x="247" y="400" text-anchor="end" font-size="26" font-weight="bold" fill="#045FD4">数据驱动</text>
+    <text data-slot="p2_desc" x="247" y="430" text-anchor="end" font-size="17" fill="#5C636E">
+      <tspan x="247" dy="0">基于数字工具、数据驱</tspan><tspan x="247" dy="26">动的洞察,促进决策、</tspan><tspan x="247" dy="26">解锁价值观</tspan>
+    </text>
+  </g>
+  <!-- 支柱3 发展创新(右上,左对齐) -->
+  <g id="pillar-3" font-family="'Microsoft YaHei',sans-serif">
+    <circle cx="922" cy="182" r="40" fill="url(#bzIconDisc)"/>
+    <use data-icon="tabler-outline/bulb" x="900" y="160" width="44" height="44" fill="#FFFFFF"/>
+    <text data-slot="p3_title" x="970" y="174" font-size="26" font-weight="bold" fill="#045FD4">发展创新</text>
+    <text data-slot="p3_desc" x="970" y="204" font-size="17" fill="#5C636E">
+      <tspan x="970" dy="0">适应并动态、持续改进</tspan><tspan x="970" dy="26">方法、手段、升级管理</tspan><tspan x="970" dy="26">理念和模式</tspan>
+    </text>
+  </g>
+  <!-- 支柱4 以人为中心(右下,左对齐) -->
+  <g id="pillar-4" font-family="'Microsoft YaHei',sans-serif">
+    <circle cx="980" cy="410" r="40" fill="url(#bzIconDisc)"/>
+    <use data-icon="tabler-outline/user-heart" x="958" y="388" width="44" height="44" fill="#FFFFFF"/>
+    <text data-slot="p4_title" x="1028" y="400" font-size="26" font-weight="bold" fill="#045FD4">以人为中心</text>
+    <text data-slot="p4_desc" x="1028" y="430" font-size="17" fill="#5C636E">
+      <tspan x="1028" dy="0">以数字技术等为工具,</tspan><tspan x="1028" dy="26">以人为本,打造员工以</tspan><tspan x="1028" dy="26">及组织利益者体验</tspan>
+    </text>
+  </g>
+  <!-- 支柱5 数字文化(下,居中) -->
+  <g id="pillar-5" font-family="'Microsoft YaHei',sans-serif">
+    <circle cx="640" cy="560" r="40" fill="url(#bzIconDisc)"/>
+    <use data-icon="tabler-outline/world" x="618" y="538" width="44" height="44" fill="#FFFFFF"/>
+    <text data-slot="p5_title" x="640" y="620" text-anchor="middle" font-size="26" font-weight="bold" fill="#045FD4">数字文化</text>
+    <text data-slot="p5_desc" x="640" y="650" text-anchor="middle" font-size="17" fill="#5C636E">
+      <tspan x="640" dy="0">使用颠覆性数字技术和工具产生</tspan><tspan x="640" dy="26">共同价值观和规范</tspan>
+    </text>
+  </g>
+</svg>

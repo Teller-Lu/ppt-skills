@@ -1,0 +1,87 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bzBg" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#F7FBFF"/><stop offset="1" stop-color="#E9F1FC"/>
+    </linearGradient>
+    <radialGradient id="bzAtm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#59B0FF" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#59B0FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bzAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#079FFE"/><stop offset="1" stop-color="#54CCFF"/>
+    </linearGradient>
+    <linearGradient id="bzHeaderGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0CA2FF"/><stop offset="1" stop-color="#0A5FD4"/>
+    </linearGradient>
+    <filter id="bzCard" x="-15%" y="-15%" width="130%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+      <feOffset dx="0" dy="8" result="o"/>
+      <feFlood flood-color="#1C5BB0" flood-opacity="0.14"/>
+      <feComposite in2="o" operator="in" result="s"/>
+      <feMerge><feMergeNode in="s"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1280" height="720" fill="url(#bzBg)"/>
+  <g id="bg-decoration">
+    <circle cx="1160" cy="120" r="280" fill="url(#bzAtm)"/>
+    <circle cx="120" cy="650" r="240" fill="url(#bzAtm)"/>
+  </g>
+
+  <g id="header-title">
+    <text data-slot="page_title" x="76" y="86" font-family="'Microsoft YaHei','HarmonyOS Sans SC',sans-serif" font-size="34" font-weight="bold" fill="#1F2733">自动驾驶测试数据排名</text>
+    <rect x="76" y="104" width="140" height="6" rx="3" fill="url(#bzAccent)"/>
+  </g>
+
+  <!-- 圆角卡片容器 -->
+  <rect x="64" y="150" width="1152" height="420" rx="16" fill="#FFFFFF" filter="url(#bzCard)"/>
+  <!-- 斑马行(偶数行浅蓝) -->
+  <g id="zebra">
+    <rect x="72" y="268" width="1136" height="58" fill="#EAF2FD"/>
+    <rect x="72" y="384" width="1136" height="58" fill="#EAF2FD"/>
+    <rect x="72" y="500" width="1136" height="58" fill="#EAF2FD"/>
+  </g>
+  <!-- 渐变表头(顶角圆角) -->
+  <path d="M64,166 A16,16 0 0 1 80,150 L1200,150 A16,16 0 0 1 1216,166 L1216,210 L64,210 Z" fill="url(#bzHeaderGrad)"/>
+  <g id="thead" font-family="'Microsoft YaHei',sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF">
+    <text data-slot="h1" x="100" y="190">排名</text>
+    <text data-slot="h2" x="188" y="190">公司</text>
+    <text data-slot="h3" x="392" y="190">测试总里程(英里)</text>
+    <text data-slot="h4" x="600" y="190">脱离次数</text>
+    <text data-slot="h5" x="798" y="190">车辆数量(台)</text>
+    <text data-slot="h6" x="1000" y="190">MPD</text>
+  </g>
+  <!-- 数据行 -->
+  <g id="tbody" font-family="'Microsoft YaHei',sans-serif" font-size="17" fill="#44546A">
+    <g id="r1">
+      <text x="100" y="246">1</text><text x="188" y="246">小马智行</text>
+      <text x="392" y="246" font-weight="bold" fill="#1F2733">305616.73</text>
+      <text x="600" y="246">21</text><text x="798" y="246">38</text><text x="1000" y="246">14553.18</text>
+    </g>
+    <g id="r2">
+      <text x="100" y="304">2</text><text x="188" y="304">文远知行</text>
+      <text x="392" y="304" font-weight="bold" fill="#1F2733">57966.25</text>
+      <text x="600" y="304">3</text><text x="798" y="304">14</text><text x="1000" y="304">19332.08</text>
+    </g>
+    <g id="r3">
+      <text x="100" y="362">3</text><text x="188" y="362">AutoX</text>
+      <text x="392" y="362" font-weight="bold" fill="#1F2733">50108</text>
+      <text x="600" y="362">1</text><text x="798" y="362">44</text><text x="1000" y="362">56108</text>
+    </g>
+    <g id="r4">
+      <text x="100" y="420">4</text><text x="188" y="420">滴滴</text>
+      <text x="392" y="420" font-weight="bold" fill="#1F2733">40744.67</text>
+      <text x="600" y="420">1</text><text x="798" y="420">12</text><text x="1000" y="420">40744.67</text>
+    </g>
+    <g id="r5">
+      <text x="100" y="478">5</text><text x="188" y="478">元戎启行</text>
+      <text x="392" y="478" font-weight="bold" fill="#1F2733">30872</text>
+      <text x="600" y="478">2</text><text x="798" y="478">2</text><text x="1000" y="478">15436</text>
+    </g>
+    <g id="r6">
+      <text x="100" y="536">6</text><text x="188" y="536">百度 Apollo</text>
+      <text x="392" y="536" font-weight="bold" fill="#1F2733">9564.6</text>
+      <text x="600" y="536">0</text><text x="798" y="536">3</text><text x="1000" y="536">无脱离</text>
+    </g>
+  </g>
+</svg>

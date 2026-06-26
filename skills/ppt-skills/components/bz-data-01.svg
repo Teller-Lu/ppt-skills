@@ -1,0 +1,112 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bzBg" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#F7FBFF"/><stop offset="1" stop-color="#E9F1FC"/>
+    </linearGradient>
+    <radialGradient id="bzAtm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#59B0FF" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#59B0FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bzAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#079FFE"/><stop offset="1" stop-color="#54CCFF"/>
+    </linearGradient>
+    <radialGradient id="bzIconDisc" cx="0.4" cy="0.35" r="0.8">
+      <stop offset="0" stop-color="#3CC0FF"/><stop offset="1" stop-color="#0A66DD"/>
+    </radialGradient>
+    <linearGradient id="bzBarGray" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DCE3EE"/><stop offset="1" stop-color="#C4CCD9"/>
+    </linearGradient>
+    <linearGradient id="bzBarAzure" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3CC0FF"/><stop offset="1" stop-color="#0A66DD"/>
+    </linearGradient>
+    <filter id="bzCard" x="-15%" y="-15%" width="130%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9"/>
+      <feOffset dx="0" dy="8" result="o"/>
+      <feFlood flood-color="#1C5BB0" flood-opacity="0.13"/>
+      <feComposite in2="o" operator="in" result="s"/>
+      <feMerge><feMergeNode in="s"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="bzUp" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#0A9FFE"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1280" height="720" fill="url(#bzBg)"/>
+  <g id="bg-decoration">
+    <circle cx="1160" cy="120" r="280" fill="url(#bzAtm)"/>
+    <circle cx="120" cy="650" r="240" fill="url(#bzAtm)"/>
+  </g>
+
+  <g id="header">
+    <circle cx="90" cy="66" r="20" fill="url(#bzIconDisc)"/>
+    <use data-icon="tabler-outline/trending-up" x="76" y="52" width="28" height="28" fill="#FFFFFF"/>
+    <text data-slot="page_title" x="124" y="76" font-family="'Microsoft YaHei','HarmonyOS Sans SC',sans-serif" font-size="34" font-weight="bold" fill="#1F2733">建筑行业体量持续走高</text>
+    <rect x="124" y="92" width="110" height="6" rx="3" fill="url(#bzAccent)"/>
+  </g>
+
+  <!-- 卡1 -->
+  <g id="card-1" font-family="'Microsoft YaHei',sans-serif">
+    <rect x="64" y="150" width="340" height="470" rx="14" fill="#FFFFFF" filter="url(#bzCard)"/>
+    <text x="92" y="208" font-size="14" fill="#98A0AC">2020 年</text>
+    <text x="92" y="246" font-size="15" fill="#5C636E">建筑业总产值</text>
+    <text data-slot="c1_kpi1" x="92" y="282" font-size="26" font-weight="bold" fill="#045FD4">26.39 万亿</text>
+    <text x="250" y="246" font-size="15" fill="#5C636E">同比增长</text>
+    <text data-slot="c1_kpi2" x="250" y="282" font-size="26" font-weight="bold" fill="#045FD4">6.2%</text>
+    <text x="92" y="338" font-size="14" fill="#98A0AC">建筑业总产值(万亿)</text>
+    <line x1="92" y1="585" x2="376" y2="585" stroke="#E0E6EF" stroke-width="1.5"/>
+    <rect x="112" y="465" width="52" height="120" fill="url(#bzBarGray)"/>
+    <rect x="192" y="445" width="52" height="140" fill="url(#bzBarGray)"/>
+    <rect x="272" y="420" width="52" height="165" fill="url(#bzBarAzure)"/>
+    <polyline points="138,465 218,445 298,420" fill="none" stroke="#0A9FFE" stroke-width="2.5" marker-end="url(#bzUp)"/>
+    <text x="138" y="455" font-size="14" fill="#5C636E" text-anchor="middle">23.1</text>
+    <text x="218" y="435" font-size="14" fill="#5C636E" text-anchor="middle">24.84</text>
+    <text x="298" y="410" font-size="14" font-weight="bold" fill="#045FD4" text-anchor="middle">28.39</text>
+    <text x="138" y="605" font-size="14" fill="#98A0AC" text-anchor="middle">2018</text>
+    <text x="218" y="605" font-size="14" fill="#98A0AC" text-anchor="middle">2019</text>
+    <text x="298" y="605" font-size="14" fill="#98A0AC" text-anchor="middle">2020</text>
+  </g>
+
+  <!-- 卡2 -->
+  <g id="card-2" font-family="'Microsoft YaHei',sans-serif">
+    <rect x="470" y="150" width="340" height="470" rx="14" fill="#FFFFFF" filter="url(#bzCard)"/>
+    <text x="498" y="208" font-size="14" fill="#98A0AC">2020 年 6 月底</text>
+    <text x="498" y="246" font-size="15" fill="#5C636E">有施工活动企业</text>
+    <text data-slot="c2_kpi1" x="498" y="282" font-size="26" font-weight="bold" fill="#045FD4">102712 个</text>
+    <text x="662" y="246" font-size="15" fill="#5C636E">同比增长</text>
+    <text data-slot="c2_kpi2" x="662" y="282" font-size="26" font-weight="bold" fill="#045FD4">10.76%</text>
+    <text x="498" y="338" font-size="14" fill="#98A0AC">建筑业企业数量(个)</text>
+    <line x1="498" y1="585" x2="782" y2="585" stroke="#E0E6EF" stroke-width="1.5"/>
+    <rect x="518" y="465" width="52" height="120" fill="url(#bzBarGray)"/>
+    <rect x="598" y="445" width="52" height="140" fill="url(#bzBarGray)"/>
+    <rect x="678" y="420" width="52" height="165" fill="url(#bzBarAzure)"/>
+    <polyline points="544,465 624,445 704,420" fill="none" stroke="#0A9FFE" stroke-width="2.5" marker-end="url(#bzUp)"/>
+    <text x="544" y="455" font-size="14" fill="#5C636E" text-anchor="middle">65993</text>
+    <text x="624" y="435" font-size="14" fill="#5C636E" text-anchor="middle">92733</text>
+    <text x="704" y="410" font-size="14" font-weight="bold" fill="#045FD4" text-anchor="middle">102712</text>
+    <text x="544" y="605" font-size="14" fill="#98A0AC" text-anchor="middle">2018H1</text>
+    <text x="624" y="605" font-size="14" fill="#98A0AC" text-anchor="middle">2019H1</text>
+    <text x="704" y="605" font-size="14" fill="#98A0AC" text-anchor="middle">2020H1</text>
+  </g>
+
+  <!-- 卡3 -->
+  <g id="card-3" font-family="'Microsoft YaHei',sans-serif">
+    <rect x="876" y="150" width="340" height="470" rx="14" fill="#FFFFFF" filter="url(#bzCard)"/>
+    <text x="904" y="208" font-size="14" fill="#98A0AC">2020 年</text>
+    <text x="904" y="246" font-size="15" fill="#5C636E">建筑业增加值</text>
+    <text data-slot="c3_kpi1" x="904" y="282" font-size="26" font-weight="bold" fill="#045FD4">7.1 万亿</text>
+    <text x="1062" y="246" font-size="15" fill="#5C636E">占 GDP</text>
+    <text data-slot="c3_kpi2" x="1062" y="282" font-size="26" font-weight="bold" fill="#045FD4">7.0%</text>
+    <text x="904" y="338" font-size="14" fill="#98A0AC">建筑业增加值(万亿)</text>
+    <line x1="904" y1="585" x2="1188" y2="585" stroke="#E0E6EF" stroke-width="1.5"/>
+    <rect x="924" y="465" width="52" height="120" fill="url(#bzBarGray)"/>
+    <rect x="1004" y="445" width="52" height="140" fill="url(#bzBarGray)"/>
+    <rect x="1084" y="420" width="52" height="165" fill="url(#bzBarAzure)"/>
+    <polyline points="950,465 1030,445 1110,420" fill="none" stroke="#0A9FFE" stroke-width="2.5" marker-end="url(#bzUp)"/>
+    <text x="950" y="455" font-size="14" fill="#5C636E" text-anchor="middle">6.2</text>
+    <text x="1030" y="435" font-size="14" fill="#5C636E" text-anchor="middle">6.8</text>
+    <text x="1110" y="410" font-size="14" font-weight="bold" fill="#045FD4" text-anchor="middle">7.1</text>
+    <text x="950" y="605" font-size="14" fill="#98A0AC" text-anchor="middle">2018</text>
+    <text x="1030" y="605" font-size="14" fill="#98A0AC" text-anchor="middle">2019</text>
+    <text x="1110" y="605" font-size="14" fill="#98A0AC" text-anchor="middle">2020</text>
+  </g>
+</svg>

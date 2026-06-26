@@ -1,0 +1,43 @@
+{
+  "style": "geely",
+  "title": "GEELY 吉利公司风 · 签名页模板",
+  "description": "蒸自 四驱扭矩寻优分配系统专项汇报.pptx + 驱动型式对弯道性能的仿真分析_E22H.pptx。极简公司风:全局微软雅黑,白底/丝绸底,文字+占位框+装饰线块。",
+  "canvas": "13.33x7.5in (16:9)",
+  "font": "微软雅黑",
+  "palette": {
+    "ink": "262626 主标题近黑",
+    "gray": "595959 副文字灰(日期/部门)",
+    "thanks": "4D4D4D THANKS中深灰",
+    "lblue": "BDD7EE 中间页浅蓝强调块",
+    "vline": "404040 竖线引导深灰",
+    "place": "BFBFBF 占位框线 / A6A6A6 占位提示字"
+  },
+  "items": [
+    {
+      "id": "gy-signature",
+      "file": "builders/gy-signature.py",
+      "type": "builder",
+      "role": "签名页 + 角标框架(一个 builder 4 版式)",
+      "layouts": [
+        {"fn": "build_cover_white(slide,title,date)", "desc": "纯白极简封面:白底 + 左上联名logo占位 + 竖线引导 + 黑标题40pt左对齐 + 灰日期15pt"},
+        {"fn": "build_cover_silk(slide,title,dept,author,date)", "desc": "深灰蓝丝绸封面:原模板背景图铺底 + 白标题36pt粗居中 + 左侧竖线 + 部门/编制/时间16pt左对齐"},
+        {"fn": "build_closing(slide,thanks)", "desc": "THANKS结尾:白底 + 居中双logo占位 + THANKS灰70pt居中"},
+        {"fn": "build_content(slide,page_title)", "desc": "中间页角标框架:白底 + 左上标题28pt配浅蓝强调块 + 右上logo占位 + 空内容区(左右上各一角标)"}
+      ],
+      "discipline": "微软雅黑烤进每个 run 的 latin/ea/cs; DLP水印(EagleCloudWatermark/保密:一级)一律不蒸; 真实 logo 不入库只留虚线占位框",
+      "demo": "python gy-signature.py [white|silk|closing|content|master]; master=4页合集册",
+      "source": "四驱扭矩寻优分配系统专项汇报.pptx(白封面 p1/THANKS p5/技术图谱 p3) + 驱动型式对弯道性能的仿真分析_E22H.pptx(丝绸封面 p1)"
+    },
+    {
+      "id": "gy-cover-silk-bg",
+      "file": "rasters/gy-cover-silk-bg.jpg",
+      "type": "raster",
+      "role": "丝绸封面背景图(深灰蓝3D折面质感, 1600x900, 原模板原样保留不改动)",
+      "inject": "build_cover_silk 内 add_silk_photo_bg 用 add_picture 铺满全屏",
+      "note": "右上自带 GEELY 字标(原图组成部分,非单独图标); 若日后并入公开仓库需注意此商标会随背景带出",
+      "source": "驱动型式对弯道性能的仿真分析_E22H.pptx slide1 layout 背景"
+    }
+  ],
+  "logos_note": "真实 logo 不入库(用户定)。实战用的 3 张 logo 在 _experiments/company-style/icons_tmp/(临时): gy-logo-asiangames-geely.png(亚运×GEELY联名) / gy-logo-geely-wordmark.png(GEELY字标高清1788x271) / gy-logo-geely-small.png(GEELY小字标)。实战做PPT时取这些填进各页占位框。",
+  "watermark_note": "原模板每页右上的 EagleCloudWatermark(保密:一级红框)是易连EasyLink DLP水印, 蒸馏时全部排除, 未入任何资产。"
+}

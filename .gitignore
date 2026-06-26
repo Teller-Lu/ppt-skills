@@ -1,0 +1,20 @@
+# 实验/草稿(不进 repo)
+_experiments/
+_inbox/
+
+# Python
+__pycache__/
+*.pyc
+.cache/
+
+# 运行时产物(skill 跑出来的项目产物)
+**/exports/
+**/backup/
+**/.cache/
+
+# v0.0.1 暂不上传(本地规划/实验/成果草稿;_experiments 已在上面忽略)
+_backups/
+_gallery/geely-master/
+docs/ppt-design_双skill拆分方案.md
+docs/superpowers/
+临时.md

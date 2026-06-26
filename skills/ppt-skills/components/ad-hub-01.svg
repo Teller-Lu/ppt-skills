@@ -1,0 +1,64 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="adBg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#F7FBFE"/><stop offset="1" stop-color="#EAF4FD"/>
+    </linearGradient>
+    <radialGradient id="adAtm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#58AAEC" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#58AAEC" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="adAccent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#146DB4"/><stop offset="1" stop-color="#14319C"/>
+    </linearGradient>
+    <radialGradient id="hubGrad" cx="0.5" cy="0.4" r="0.85">
+      <stop offset="0" stop-color="#1C7FD0"/><stop offset="1" stop-color="#14319C"/>
+    </radialGradient>
+    <radialGradient id="hexGrad" cx="0.5" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#58AAEC"/><stop offset="1" stop-color="#146DB4"/>
+    </radialGradient>
+    <filter id="adShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+      <feOffset dx="0" dy="8" result="o"/>
+      <feFlood flood-color="#146DB4" flood-opacity="0.18"/>
+      <feComposite in2="o" operator="in" result="s"/>
+      <feMerge><feMergeNode in="s"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="1280" height="720" fill="url(#adBg)"/>
+  <g id="bg-decoration">
+    <circle cx="1130" cy="130" r="300" fill="url(#adAtm)"/>
+    <circle cx="150" cy="620" r="260" fill="url(#adAtm)"/>
+    <polygon points="850,386 745,204 535,204 430,386 535,568 745,568" fill="none" stroke="#146DB4" stroke-opacity="0.07" stroke-width="1.5"/>
+  </g>
+  <g id="header">
+    <text data-slot="page_title" x="84" y="78" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="40" font-weight="bold" fill="#222A35">页面标题</text>
+    <rect x="84" y="92" width="120" height="6" rx="3" fill="url(#adAccent)"/>
+  </g>
+  <!-- 中心 hub -->
+  <g id="hub">
+    <rect x="548" y="336" width="184" height="104" rx="22" fill="url(#hubGrad)" filter="url(#adShadow)"/>
+    <text data-slot="hub_title" x="640" y="380" text-anchor="middle" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF"><tspan x="640" dy="0">核心主题</tspan><tspan x="640" dy="28">转型特征</tspan></text>
+  </g>
+  <!-- 4 个六边形图标徽章(卫星) -->
+  <g id="badges">
+    <polygon points="466,300 448,269 412,269 394,300 412,331 448,331" fill="url(#hexGrad)" filter="url(#adShadow)"/>
+    <use data-icon="tabler-outline/bolt" x="410" y="280" width="40" height="40" fill="#FFFFFF"/>
+    <polygon points="886,300 868,269 832,269 814,300 832,331 868,331" fill="url(#hexGrad)" filter="url(#adShadow)"/>
+    <use data-icon="tabler-outline/activity" x="830" y="280" width="40" height="40" fill="#FFFFFF"/>
+    <polygon points="466,476 448,445 412,445 394,476 412,507 448,507" fill="url(#hexGrad)" filter="url(#adShadow)"/>
+    <use data-icon="tabler-outline/route-2" x="410" y="456" width="40" height="40" fill="#FFFFFF"/>
+    <polygon points="886,476 868,445 832,445 814,476 832,507 868,507" fill="url(#hexGrad)" filter="url(#adShadow)"/>
+    <use data-icon="tabler-outline/network" x="830" y="456" width="40" height="40" fill="#FFFFFF"/>
+  </g>
+  <!-- 4 角文字块:彩色小标题 + 2 行正文 -->
+  <g id="corner-text">
+    <text data-slot="block1_head" x="96" y="180" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="24" font-weight="bold" fill="#146DB4">特征一</text>
+    <text data-slot="block1_body" x="96" y="216" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="17" fill="#44546A"><tspan x="96" dy="0">该特征的简要说明,</tspan><tspan x="96" dy="26">两行以内收住。</tspan></text>
+    <text data-slot="block2_head" x="884" y="180" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="24" font-weight="bold" fill="#146DB4">特征二</text>
+    <text data-slot="block2_body" x="884" y="216" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="17" fill="#44546A"><tspan x="884" dy="0">该特征的简要说明,</tspan><tspan x="884" dy="26">两行以内收住。</tspan></text>
+    <text data-slot="block3_head" x="96" y="528" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="24" font-weight="bold" fill="#146DB4">特征三</text>
+    <text data-slot="block3_body" x="96" y="564" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="17" fill="#44546A"><tspan x="96" dy="0">该特征的简要说明,</tspan><tspan x="96" dy="26">两行以内收住。</tspan></text>
+    <text data-slot="block4_head" x="884" y="528" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="24" font-weight="bold" fill="#146DB4">特征四</text>
+    <text data-slot="block4_body" x="884" y="564" font-family="'HarmonyOS Sans SC','Microsoft YaHei',sans-serif" font-size="17" fill="#44546A"><tspan x="884" dy="0">该特征的简要说明,</tspan><tspan x="884" dy="26">两行以内收住。</tspan></text>
+  </g>
+</svg>
