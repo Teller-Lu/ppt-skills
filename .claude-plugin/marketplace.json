@@ -1,6 +1,6 @@
 {
   "name": "ppt-skills",
-  "description": "个人风格 PPT 生成 skill(基于 ppt-master 方法论,质量地板 + 内容适配)。",
+  "description": "一个设计和制作PPT的skill。",
   "owner": {
     "name": "Teller",
     "email": "tellerlu@163.com"
@@ -10,7 +10,7 @@
       "name": "ppt-skills",
       "source": "./",
       "description": "Personal-style PPT generator: template-floor + content-fit, SVG → editable PPTX.",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "author": { "name": "Teller-Lu" }
     }
   ]
