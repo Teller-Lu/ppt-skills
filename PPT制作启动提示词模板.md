@@ -36,10 +36,11 @@
 2. 已填资料清单(约束/风格/主线/真实图指向，若有)：【填:资料清单路径，或写"无，约束见下"】
 3. 本工作区根手册 CLAUDE.md(已自动加载) + 记忆里所有 ppt-* 条目(设计/蒸馏/分工/避坑经验，务必看)
 
-【你的能力 = ppt-skills plugin 个人模板库(读文件用，不是装好的插件)，含两个 skill】根目录 D:\Lu.Yao7\VehicleTellerLu\Agent\Shared\skills-creator\ppt-skills
+【你的能力 = ppt-skills plugin 个人模板库(读文件用，不是装好的插件)，含三个 skill】根目录 D:\Lu.Yao7\VehicleTellerLu\Agent\Shared\skills-creator\ppt-skills
 - ★设计前脑 ppt-design(做 PPT 第一步、先用它出设计稿)：skills\ppt-design\SKILL.md + references\(表达式词典.md 内容→最优表达→红线、逐页设计稿模板.md 四问、设计反模式案例库.md 避坑、范本-立项v1.1.md 样板)
 - 制作 skill 运行手册：skills\ppt-skills\SKILL.md
 - ★美化主脑(制作时必读)：skills\ppt-skills\references\design-language.md(景深/光影/占版/字号刻度/出件四选一/自检清单/避坑；表达决策已前置到 ppt-design)
+- ★讲稿 ppt-script(定稿 pptx 后配口语化讲稿写进备注)：skills\ppt-script\SKILL.md + references\(讲稿铁律 别念稿/口语化/页间过渡、讲稿模板、个人讲稿风格占位) + scripts\write_notes.py
 - 页型配方：skills\ppt-skills\references\页型配方.md
 - 资产地图：skills\ppt-skills\references\资产地图.md(素材在哪、怎么 place 调用)
 - geely 公司风：skills\ppt-skills\assets\geely\(builder gy-signature.py = 纯白封面/丝绸封面/THANKS 结尾/中间页角标；catalog.json；rasters\gy-cover-silk-bg.jpg)
@@ -71,7 +72,8 @@
   页数按上面约束，主线按上面顺序；封面/结尾用 geely。
 第 2 步（制作，走 ppt-skills）：我批准设计稿后，你按稿用 builder/place 调库做成可编辑 pptx(输出到：【填:输出路径，如 项目目录\xxx_vN.pptx】)。设计稿的"表达式/真实素材"即制作依据，别另起设计。
 第 3 步：用 render_slides.ps1 逐页渲染 PNG，自己对照 design-language 自检(字号/无重叠/真素材非占位/水印净) → 改 → 给我核对 → 定稿。
-第 4 步（收尾回灌）：定稿后把我每处打回写进 skills\ppt-design\references\设计反模式案例库.md，并在进步指标台账记一行"<PPT名 版本>：打回 N 处"。
+第 4 步（讲稿，走 ppt-script）：定稿 pptx 后，按《讲稿铁律》逐页四件套(承上句/核心句/展开/约X秒)出《讲稿.md》给我审(别念稿/口语化/页间过渡)；批准后把每页口语正文用 @@@SLIDE@@@ 分隔成备注源 → python skills\ppt-script\scripts\write_notes.py <定稿.pptx> <备注源.txt> -o <带讲稿.pptx> 写进备注。
+第 5 步（收尾回灌）：定稿后把我每处打回写进 skills\ppt-design\references\设计反模式案例库.md，并在进步指标台账记一行"<PPT名 版本>：打回 N 处"。
 
 现在开始第 1 步：读输入，走 ppt-design 四问，产出《逐页设计稿》。
 ```

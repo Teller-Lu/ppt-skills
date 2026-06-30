@@ -10,7 +10,7 @@
       "name": "ppt-skills",
       "source": "./",
       "description": "Personal-style PPT generator: template-floor + content-fit, SVG → editable PPTX.",
-      "version": "0.0.2",
+      "version": "0.0.3",
       "author": { "name": "Teller-Lu" }
     }
   ]

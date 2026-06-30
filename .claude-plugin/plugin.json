@@ -1,7 +1,7 @@
 {
   "name": "ppt-skills",
   "description": "个人风格 PPT 生成 skill:以人工模板为质量地板,把真实内容适配进去,产出可编辑 PPTX(SVG→原生 DrawingML)。",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": { "name": "Teller-Lu" },
   "license": "MIT",
   "keywords": ["skills", "ppt", "presentation", "pptx", "svg"]
